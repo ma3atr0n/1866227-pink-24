@@ -1,7 +1,7 @@
 # Личный проект «Пинк» 
 
 * Студент: [Вячеслав Гурин](https://up.htmlacademy.ru/adaptive/24/user/1866227).
-* Наставник: `Неизвестно`.
+* Наставник: [Алим Нагоев](https://up.htmlacademy.ru/adaptive/24/user/911531).
 
 ---
 
