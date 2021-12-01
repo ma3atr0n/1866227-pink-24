@@ -37,7 +37,9 @@
       <section class="gallery">
         <h2 class="visually__hidden">Галерея фотографий</h2>
         <div class="gallery__panorama">
-          <img class="gallery__panorama-image" src="" alt="">
+          <a class="gallery__preview" href="#" title="Фото панорамы" aria-label="Фото панорамы">
+            <img class="gallery__image" src="img/main/gallery/panorama.jpg" width="1200" height="506" alt="Фото панорамы">
+          </a>
           <div class="gallery__panorama-content">
             <h3 class="gallery__title">Анна<span class="gallery__title-time">(5 минут назад)</span></h3>
             <p class="gallery__text">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
@@ -116,8 +118,43 @@
           </li>
         </ul>
       </section>
-      <section class="">
-
+      <section class="post">
+        <h2 class="post__title">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</h2>
+        <form class="post-form" action="https://echo.htmlacademy.ru" method="POST">
+          <img class="post-form__image" src="img/main/gallery/photo-post.jpg" width="300" height="400" alt="Фото для редактирования">
+          <div class="post-form__setting">
+            <ul class="post-form__list">
+              <li class="post-form__item">
+                <svg class="post-form__icon"></svg>
+                <div class="post-form__toggle">
+                  <button class="post-form__toggle-button" type="button">
+                    <span class="visually-hidden">Изменить размер</span>
+                  </button>
+                </div>
+              </li>
+              <li class="post-form__item">
+                <svg class="post-form__icon"></svg>
+                <div class="post-form__toggle">
+                  <button class="post-form__toggle-button" type="button">
+                    <span class="visually-hidden">Изменить заливку</span>
+                  </button>
+                </div>
+              </li>
+              <li class="post-form__item">
+                <svg class="post-form__icon"></svg>
+                <div class="post-form__toggle">
+                  <button class="post-form__toggle-button" type="button">
+                    <span class="visually-hidden">Изменить яркость</span>
+                  </button>
+                </div>
+              </li>
+            </ul>
+            <div class="post-form__button">
+              <button class="post-form__button-upload" type="submit">Запостить</button>
+              <button class="post-form__button-reset" type="reset">Отмена</button>
+            </div>
+          </div>
+        </form>
       </section>
     </main>
     <footer class="page-footer">
