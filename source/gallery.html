@@ -32,130 +32,183 @@
       </nav>
     </header>
     <main class="page-gallery">
-      <h1 class="page-gallery__title">Фотографии пользователей</h1>
-      <p class="page-gallery__text">Взгляните на фотографии, которые выкладывают пользователи!
-        Видите, как не хватает ваших?</p>
+      <header class="intro">
+        <div class="intro__inner intro__inner--gallery">
+          <h1 class="intro__title">Фотографии пользователей</h1>
+        </div>
+      </header>
       <section class="gallery">
         <h2 class="visually__hidden">Галерея фотографий</h2>
-        <div class="gallery__panorama">
-          <a class="gallery__preview" href="#" title="Фото панорамы" aria-label="Фото панорамы">
-            <img class="gallery__image" src="img/main/gallery/panorama.jpg" width="1200" height="506" alt="Фото панорамы">
-          </a>
-          <div class="gallery__panorama-content">
-            <h3 class="gallery__title">Анна<span class="gallery__title-time">(5 минут назад)</span></h3>
-            <p class="gallery__text">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-            <div class="gallery__like">
-              <p class="gallery__counter">Нравится: <span class="gallery__number">215</span></p>
-              <svg class="gallery__heart"></svg>
+        <p class="gallery__text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+        <ul class="gallery__list gallery-list">
+          <li class="gallery-list__item">
+            <div class="gallery-list__header">
+              <img class="gallery-list__image" src="img/main/gallery/panorama.jpg" width="1200" height="506" alt="Фото панорамы">
             </div>
-          </div>
-        </div>
-        <ul class="gallery__list">
-          <li class="gallery__item">
-            <a class="gallery__preview" href="#" title="Фото со штатива" aria-label="Фото со штатива">
-              <img class="gallery__image" src="img/main/gallery/photo-1.jpg" width="300" height="400" alt="Фото со штатива">
-            </a>
-            <h3 class="gallery__title">Левон<span class="gallery__title-time">(5 часов назад)</span></h3>
-            <p class="gallery__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-            <div class="gallery__like">
-              <p class="gallery__counter">Нравится: <span class="gallery__number">356</span></p>
-              <svg class="gallery__heart"></svg>
+            <div class="gallery-list__content">
+              <p class="gallery-list__author">Анна<span class="gallery__title-time">(5 минут назад)</span></p>
+              <p class="gallery-list__text">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+              <div class="gallery-list__like like">
+                <button class="like__button">
+                  <svg class="like__heart"></svg>
+                </button>
+                <p class="like__count">Нравится: <span class="like__value">215</span></p>
+              </div>
             </div>
           </li>
-          <li class="gallery__item">
-            <a class="gallery__preview" href="#" title="Фото барабанов" aria-label="Фото барабанов">
-              <img class="gallery__image" src="img/main/gallery/photo-2.jpg" width="300" height="400" alt="Фото барабанов">
-            </a>
-            <h3 class="gallery__title">Антон<span class="gallery__title-time">(12 часов назад)</span></h3>
-            <p class="gallery__text">Соседи будут рады!</p>
-            <div class="gallery__like">
-              <p class="gallery__counter">Нравится: <span class="gallery__number">666</span></p>
-              <svg class="gallery__heart"></svg>
+          <li class="gallery-list__item">
+            <div class="gallery-list__header">
+              <img class="gallery-list__image" src="img/main/gallery/photo-1.jpg" width="300" height="400" alt="Фото со штатива">
+            </div>
+            <div class="gallery-list__content">
+              <p class="gallery-list__author">Левон<span class="gallery__title-time">(5 часов назад)</span></p>
+              <p class="gallery-list__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+              <div class="gallery-list__like like">
+                <button class="like__button">
+                  <svg class="like__heart"></svg>
+                </button>
+                <p class="like__count">Нравится: <span class="like__value">356</span></p>
+              </div>
             </div>
           </li>
-          <li class="gallery__item">
-            <a class="gallery__preview" href="#" title="Фото окон" aria-label="Фото окон">
-              <img class="gallery__image" src="img/main/gallery/photo-3.jpg" width="300" height="400" alt="Фото окон">
-            </a>
-            <h3 class="gallery__title">Борис<span class="gallery__title-time">(20 часов назад)</span></h3>
-            <p class="gallery__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
-            <div class="gallery__like">
-              <p class="gallery__counter">Нравится: <span class="gallery__number">215</span></p>
-              <svg class="gallery__heart"></svg>
+          <li class="gallery-list__item">
+            <div class="gallery-list__header">
+              <img class="gallery-list__image" src="img/main/gallery/photo-2.jpg" width="300" height="400" alt="Фото барабанов">
+            </div>
+            <div class="gallery-list__content">
+              <p class="gallery-list__author">Антон<span class="gallery__title-time">(12 часов назад)</span></p>
+              <p class="gallery-list__text">Соседи будут рады!</p>
+              <div class="gallery-list__like like">
+                <button class="like__button">
+                  <svg class="like__heart"></svg>
+                </button>
+                <p class="like__count">Нравится: <span class="like__value">666</span></p>
+              </div>
             </div>
           </li>
-          <li class="gallery__item">
-            <a class="gallery__preview" href="#" title="Фото ярморки" aria-label="Фото ярморки">
-              <img class="gallery__image" src="img/main/gallery/photo-4.jpg" width="300" height="400" alt="Фото ярморки">
-            </a>
-            <h3 class="gallery__title">Сергей<span class="gallery__title-time">(25 часов назад)</span></h3>
-            <p class="gallery__text">Самая кубанская в мире!</p>
-            <div class="gallery__like">
-              <p class="gallery__counter">Нравится: <span class="gallery__number">4</span></p>
-              <svg class="gallery__heart"></svg>
+          <li class="gallery-list__item">
+            <div class="gallery-list__header">
+              <img class="gallery-list__image" src="img/main/gallery/photo-3.jpg" width="300" height="400" alt="Фото стекол">
+            </div>
+            <div class="gallery-list__content">
+              <p class="gallery-list__author">Борис<span class="gallery__title-time">(20 часов назад)</span></p>
+              <p class="gallery-list__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
+              <div class="gallery-list__like like">
+                <button class="like__button">
+                  <svg class="like__heart"></svg>
+                </button>
+                <p class="like__count">Нравится: <span class="like__value">215</span></p>
+              </div>
             </div>
           </li>
-          <li class="gallery__item">
-            <a class="gallery__preview" href="#" title="Фото на вершине" aria-label="Фото на вершине">
-              <img class="gallery__image" src="img/main/gallery/photo-5.jpg" width="300" height="400" alt="Фото на вершине">
-            </a>
-            <h3 class="gallery__title">Максим<span class="gallery__title-time">(40 часов назад)</span></h3>
-            <p class="gallery__text">Где снег-то?</p>
-            <div class="gallery__like">
-              <p class="gallery__counter">Нравится: <span class="gallery__number">150</span></p>
-              <svg class="gallery__heart"></svg>
+          <li class="gallery-list__item">
+            <div class="gallery-list__header">
+              <img class="gallery-list__image" src="img/main/gallery/photo-4.jpg" width="300" height="400" alt="Фото ярморки">
+            </div>
+            <div class="gallery-list__content">
+              <p class="gallery-list__author">Сергей<span class="gallery__title-time">(25 часов назад)</span></p>
+              <p class="gallery-list__text">Самая кубанская в мире!</p>
+              <div class="gallery-list__like like">
+                <button class="like__button">
+                  <svg class="like__heart"></svg>
+                </button>
+                <p class="like__count">Нравится: <span class="like__value">4</span></p>
+              </div>
             </div>
           </li>
-          <li class="gallery__item">
-            <a class="gallery__preview" href="#" title="Фото закат из самолета" aria-label="Фото закат из самолета">
-              <img class="gallery__image" src="img/main/gallery/photo-6.jpg" width="300" height="400" alt="Фото закат из самолета">
-            </a>
-            <h3 class="gallery__title">Надежда<span class="gallery__title-time">(45 часов назад)</span></h3>
-            <p class="gallery__text">Всем GM и взаимные лайки!</p>
-            <div class="gallery__like">
-              <p class="gallery__counter">Нравится: <span class="gallery__number">2560</span></p>
-              <svg class="gallery__heart"></svg>
+          <li class="gallery-list__item">
+            <div class="gallery-list__header">
+              <img class="gallery-list__image" src="img/main/gallery/photo-5.jpg" width="300" height="400" alt="Фото в горах">
+            </div>
+            <div class="gallery-list__content">
+              <p class="gallery-list__author">Максим<span class="gallery__title-time">(40 часов назад)</span></p>
+              <p class="gallery-list__text">Где снег-то?</p>
+              <div class="gallery-list__like like">
+                <button class="like__button">
+                  <svg class="like__heart"></svg>
+                </button>
+                <p class="like__count">Нравится: <span class="like__value">150</span></p>
+              </div>
+            </div>
+          </li>
+          <li class="gallery-list__item">
+            <div class="gallery-list__header">
+              <img class="gallery-list__image" src="img/main/gallery/photo-6.jpg" width="300" height="400" alt="Фото из самолета">
+            </div>
+            <div class="gallery-list__content">
+              <p class="gallery-list__author">Надежда<span class="gallery__title-time">(45 часов назад)</span></p>
+              <p class="gallery-list__text">Всем GM и взаимные лайки!</p>
+              <div class="gallery-list__like like">
+                <button class="like__button">
+                  <svg class="like__heart"></svg>
+                </button>
+                <p class="like__count">Нравится: <span class="like__value">2560</span></p>
+              </div>
             </div>
           </li>
         </ul>
       </section>
-      <section class="post">
-        <h2 class="post__title">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</h2>
-        <form class="post-form" action="https://echo.htmlacademy.ru" method="POST">
-          <img class="post-form__image" src="img/main/gallery/photo-post.jpg" width="300" height="400" alt="Фото для редактирования">
-          <div class="post-form__setting">
-            <ul class="post-form__list">
-              <li class="post-form__item">
-                <svg class="post-form__icon"></svg>
-                <div class="post-form__toggle">
-                  <button class="post-form__toggle-button" type="button">
-                    <span class="visually-hidden">Изменить размер</span>
-                  </button>
-                </div>
-              </li>
-              <li class="post-form__item">
-                <svg class="post-form__icon"></svg>
-                <div class="post-form__toggle">
-                  <button class="post-form__toggle-button" type="button">
-                    <span class="visually-hidden">Изменить заливку</span>
-                  </button>
-                </div>
-              </li>
-              <li class="post-form__item">
-                <svg class="post-form__icon"></svg>
-                <div class="post-form__toggle">
-                  <button class="post-form__toggle-button" type="button">
-                    <span class="visually-hidden">Изменить яркость</span>
-                  </button>
-                </div>
-              </li>
-            </ul>
-            <div class="post-form__button">
-              <button class="post-form__button-upload" type="submit">Запостить</button>
-              <button class="post-form__button-reset" type="reset">Отмена</button>
+      <section class="editor">
+        <div class="editor__lead">
+          <h2 class="visually__hidden">Редактор PINK - лучший из лучших</h2>
+          <p class="editor__lead-title">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+        </div>
+        <div class="editor__content">
+          <form class="editor__form" action="https://echo.htmlacademy.ru" method="POST">
+            <div class="editor__column">
+              <picture class="editor__pic">
+                <img class="editor__image" src="img/main/gallery/photo-post.jpg" width="300" height="400" alt="Фото для редактирования">
+              </picture>
             </div>
-          </div>
-        </form>
+            <div class="editor__column">
+              <ul class="editor__controls editor-controls">
+                <li class="editor-controls__item">
+                  <div class="editor-controls__icon">
+                    <svg class="editor-controls__icon-code"></svg>
+                  </div>
+                  <div class="editor-controls__toggle">
+                    <button class="editor-controls__toggle-button" type="button">
+                      <span class="visually-hidden">Изменить размер</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="editor-controls__item">
+                  <div class="editor-controls__icon">
+                    <svg class="editor-controls__icon-code"></svg>
+                  </div>
+                  <div class="editor-controls__toggle">
+                    <button class="editor-controls__toggle-button" type="button">
+                      <span class="visually-hidden">Изменить заливку</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="editor-controls__item">
+                  <div class="editor-controls__icon">
+                    <svg class="editor-controls__icon-code"></svg>
+                  </div>
+                  <div class="editor-controls__toggle">
+                    <button class="editor-controls__toggle-button" type="button">
+                      <span class="visually-hidden">Изменить яркость</span>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+              <div class="editor-controls__toggle editor-controls__toggle--footer">
+                <button class="editor-controls__toggle-button" type="button">
+                  <span class="visually-hidden">Изменить размер</span>
+                </button>
+              </div>
+              <ul class="editor__buttons">
+                <li class="editor__buttons-item">
+                  <button class="button button--bordered editor__button-upload" type="submit">Запостить</button>
+                </li>
+                <li class="editor__buttons-item"></li>
+                  <button class="button button--bordered editor__button-reset" type="reset">Отмена</button>
+                </li>
+              </ul>
+            </div>
+          </form>
+        </div>
       </section>
     </main>
     <footer class="page-footer">
