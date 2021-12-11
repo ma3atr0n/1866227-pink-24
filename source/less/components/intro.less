@@ -1,0 +1,41 @@
+.intro {
+  background-color: #1d2631;
+  background-image: url("../../img/main/bg-back-tablet.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 320px 462px;
+  color: #ffffff;
+  padding-top: 66px;
+  text-align: center;
+}
+
+.intro__inner {
+  position: relative;
+
+  &--index::before {
+    content: "";
+    display: block;
+    width: 320px;
+    height: 396px;
+    bottom: 0;
+    background-image: url("../../img/main/bg-intro-mobile.png");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.intro__title {
+  .reset-indent();
+  padding: 36px 74px 84px;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 33px;
+}
+
+.intro__promo {
+  width: 320px;
+  padding: 28px 20px 38px 20px;
+  margin: 0 auto;
+}
