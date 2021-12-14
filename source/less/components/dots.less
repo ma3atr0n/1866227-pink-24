@@ -4,7 +4,7 @@
 }
 
 .dots__item {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 24px;
@@ -16,14 +16,14 @@
   .reset-indent();
   border: 0;
   border-radius: 50%;
-  background-color: fade(#283645, 30%);
+  background-color: fade(@base-gray, 30%);
   width: 6px;
   height: 6px;
 
   &--active {
     width: 12px;
     height: 12px;
-    border: 3px solid #283645;
+    border: 3px solid @base-gray;
     background-color: transparent;
   }
 }
