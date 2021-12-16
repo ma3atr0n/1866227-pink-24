@@ -1,42 +1,19 @@
-.editor__column:not(:last-child) {
-  margin-bottom: 42px;
-}
-
 .editor-controls {
+  width: 194px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .editor-controls__icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 16px;
-  margin-left: 16px;
   width: 48px;
   height: 50px;
 }
 
 .editor-controls__toggle--list {
   display: none;
-}
-
-.editor-controls__toggle {
-  position: relative;
-  width: 240px;
-  height: 2px;
-  background-color: @base-gray;
-  margin: 34px 20px;
-}
-
-.editor-controls__toggle-button {
-  position: absolute;
-  top: -6px;
-  right: 50px;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  border: 2px solid @base-red;
-  background-color: @base-white;
 }

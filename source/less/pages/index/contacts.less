@@ -5,9 +5,26 @@
 
 .contacts__inner {
   width: 320px;
-  padding-left: 40px;
-  padding-right: 40px;
-  margin: 0 auto 31px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+  margin-bottom: 31px;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    bottom: -64px;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    height: 33px;
+    background: url("../img/main/bg-triangle-white-map-2.svg") no-repeat center top;
+  }
 }
 
 .contacts__title {
@@ -20,10 +37,9 @@
 
 .contacts__list {
   .reset-ul();
-}
 
-.contacts__item {
-  margin-bottom: 23px;
+  display: grid;
+  row-gap: 23px;
 }
 
 .contacts__item-title {
@@ -37,6 +53,6 @@
   .reset-decoration();
   .title-8();
 
-  color: @base-red;
+  color: @red-100;
   font-weight: 300;
 }

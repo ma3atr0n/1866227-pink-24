@@ -10,8 +10,8 @@
   content: "";
   position: absolute;
   display: block;
-  background-color: @base-white;
-  border: 2px solid @base-white-1;
+  background-color: @white-100;
+  border: 2px solid @white-300;
   border-radius: 1px;
   z-index: 1;
   top: 0;
@@ -37,11 +37,11 @@
   }
 
   &[type="radio"]:checked + .contest-form-control__mark::before {
-    background-image: url("../../img/main/form/radio-select.svg");
+    background-image: url("../img/main/form/radio-select.svg");
   }
 
   &[type="checkbox"]:checked + .contest-form-control__mark::before {
-    background-image: url("../../img/main/form/checkbox-select.svg");
+    background-image: url("../img/main/form/checkbox-select.svg");
   }
 }
 

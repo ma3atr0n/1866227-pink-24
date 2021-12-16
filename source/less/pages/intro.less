@@ -1,0 +1,37 @@
+.intro {
+  background: @gray-300 url("../img/main/intro/bg-back-mobile.jpg") no-repeat center top;
+  color: @white-100;
+  padding-top: 66px;
+  text-align: center;
+}
+
+.intro__inner {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+
+  &--index::before {
+    content: "";
+    display: block;
+    width: 320px;
+    height: 396px;
+    bottom: 0;
+    background: transparent url("../img/main/bg-intro-mobile.png") no-repeat left bottom;
+  }
+
+  &--gallery {
+    padding: 36px 74px 84px;
+  }
+
+  &--form {
+    padding: 36px 46px 51px;
+  }
+}
+
+.intro__title {
+  .reset-indent();
+  .title-7();
+
+  font-weight: 300;
+}
+

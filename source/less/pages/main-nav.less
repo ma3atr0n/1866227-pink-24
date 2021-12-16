@@ -7,15 +7,14 @@
 }
 
 .main-nav__logo {
-  display: inline-flex;
+  display: flex;
 }
 
 .main-nav__toggle {
-  top: 21px;
-  right: 19px;
-  width: 5px;
+  .reset-indent();
+
+  width: 50px;
   height: 24px;
-  padding: 0;
   background-color: transparent;
   border: 0;
   cursor: pointer;
@@ -23,13 +22,15 @@
 }
 
 .main-nav__list {
+  .reset-ul();
+
+  display: none;
   position: absolute;
   left: 0;
   right: 0;
+  width: 100%;
   top: 67px;
-  display: none;
   text-align: center;
-  .reset-ul();
   z-index: 2;
 }
 
@@ -38,10 +39,10 @@
   display: block;
   margin: 0;
   background-color: #283645;
-  color: @base-white;
+  color: @white-100;
   text-transform: uppercase;
   font-weight: 700;
   line-height: 32px;
   padding: 16px 20px;
-  box-shadow: 0 -1px 0 @base-black, inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  box-shadow: 0 -1px 0 @black-100, inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }

@@ -12,6 +12,11 @@
   position: relative;
 }
 
+.reviews__slider {
+  position: relative;
+  padding-bottom: 52px;
+}
+
 .reviews__list {
   .reset-ul();
 }
@@ -25,32 +30,44 @@
   .reset-indent();
   display: none;
   line-height: 30px;
-  color: @base-black;
+  color: @black-100;
+}
+
+.reviews__header {
+  margin-bottom: 14px;
 }
 
 .reviews__text {
   .reset-indent();
-  margin-top: 14px;
+
   line-height: 30px;
 }
 
 .reviews__dots {
   .reset-ul();
-  margin-top: 28px;
+
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .reviews__nav {
   .reset-ul();
-  display: flex;
+
+  /*display: flex;*/
+  display: none;
   justify-content: space-between;
   position: absolute;
   top: 100px;
   left: 0;
   right: 0;
+  max-width: 100%;
+  width: 100%;
 }
 
 .reviews__nav__button {
-  display: inline-flex;
+  display: flex;
   width: 22px;
   height: 41px;
   border: 0;
@@ -60,11 +77,11 @@
   cursor: pointer;
 
   &--prev {
-    background: url("../../img/main/arrow-left.svg") no-repeat top left;
+    background: url("../img/main/arrow-left.svg") no-repeat top left;
   }
 
   &--next {
-    background: url("../../img/main/arrow-right.svg") no-repeat top left;
+    background: url("../img/main/arrow-right.svg") no-repeat top left;
   }
 }
 

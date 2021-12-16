@@ -1,42 +1,55 @@
 .page-footer {
   text-align: center;
+  padding: 40px 0 40px;
+}
+
+.page-footer__inner {
   width: 320px;
-  padding: 40px 74px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .page-footer__logo {
-  display: inline-flex;
+  display: block;
   margin-bottom: 41px;
 }
 
 .social {
   .reset-ul();
+
+  width: 182px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   margin-bottom: 41px;
 }
 
 .social__link {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 48px;
   height: 48px;
-  border: 3px solid fade(@base-gray, 10%);
+  border: 3px solid fade(@gray-100, 10%);
   border-radius: 50%;
 }
 
 .page-footer__production {
+  .reset-decoration();
+
   display: flex;
   align-items: center;
   justify-content: center;
-  .reset-decoration();
 }
 
 .page-footer__production-text {
   line-height: 18px;
-  color: @base-gray;
+  color: @gray-100;
   margin-right: 15px;
 }

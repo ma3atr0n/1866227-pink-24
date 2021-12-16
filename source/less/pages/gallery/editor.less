@@ -1,5 +1,6 @@
 .editor {
   padding-top: 49px;
+  overflow: hidden;
 }
 
 .editor__lead {
@@ -16,15 +17,27 @@
 }
 
 .editor__content {
-  background-color: @base-gray-bg;
+  background-color: @white-200;
 }
 
-.editor__form {
+.editor__content-inner {
   width: 320px;
   padding-left: 20px;
   padding-right: 20px;
+  margin: 0 auto;
+}
+
+.editor__form {
   padding-top: 20px;
-  margin: 0 auto 41px;
+  display: grid;
+  row-gap: 42px;
+  background-color: @white-200;
+}
+
+.editor__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .editor__controls {
@@ -37,33 +50,28 @@
   position: relative;
   padding-top: 38px;
   padding-bottom: 38px;
+  width: 100%;
+  display: grid;
+  row-gap: 12px;
 
   &::before {
     position: absolute;
     content: "";
-    display: block;
     height: 1px;
     width: 100vw;
     text-align: center;
-    top: -1px;
+    top: 0;
     left: 50%;
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    background-color: @base-gray;
+    background-color: fade(@gray-100, 10%);
   }
 }
 
 .editor__button {
-  &-upload {
-    width: 100%;
-    margin-bottom: 12px;
-  }
-
+  &-upload,
   &-reset {
     width: 100%;
-    border-color: @base-gray;
-    color: @base-gray;
-    opacity: 0.1;
   }
 }
