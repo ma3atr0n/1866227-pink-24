@@ -120,7 +120,7 @@
                 <label class="contest-form__label" for="phone" aria-label="Номер, пожалуйста">Номер телефона</label>
                 <div class="contest-form__wrap">
                   <input class="contest-form__input" id="phone" type="tel" name="tel" placeholder="Номер, пожалуйста">
-                  <div class="contest-form__contacts-icon">
+                  <div class="contest-form__contacts-icon contest-form__contacts-icon--phone">
                     <span class="visually__hidden">Иконка телефона</span>
                   </div>
                 </div>
@@ -130,8 +130,7 @@
                 <div class="contest-form__wrap">
                   <input class="contest-form__input" id="email" type="email" name="email" placeholder="Введите почту *">
                   <div class="contest-form__contacts-icon contest-form__contacts-icon--email">
-                    <span class="visually__hidden">Иконка конферта</span>
-                    <svg></svg>
+                    <span class="visually__hidden">Иконка email</span>
                   </div>
                 </div>
               </li>
@@ -170,7 +169,7 @@
           </fieldset>
           <div class="contest-form__footer">
             <button class="button button--green contest-form__submit" type="submit">Отправить форму</button>
-            <p class="contest-form__annotation">— обязательные <span class="contest-form__annotation-longtext">для заполнения</span> поля</p>
+            <p class="contest-form__annotation">* — обязательные <span class="contest-form__annotation-longtext">для заполнения</span> поля</p>
           </div>
         </form>
       </section>
