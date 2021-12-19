@@ -1,0 +1,154 @@
+//form fieldset
+.contest-form__fieldset {
+  .reset-indent();
+
+  display: grid;
+  position: relative;
+  border: 0;
+  padding-top: 42px;
+  padding-bottom: 44px;
+
+  &--about {
+    padding-top: 0;
+  }
+
+  &--comment {
+    padding-bottom: 50px;
+  }
+}
+
+.contest-form__fieldset--achievements,
+.contest-form__fieldset--travel {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    text-align: center;
+    background-color: @white-200;
+    z-index: -1;
+  }
+}
+
+//form legend
+.contest-form__legend {
+  .reset-indent();
+
+  margin-bottom: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  color: @red-100;
+  line-height: 18px;
+  float: left;
+
+  &--contacts {
+    display: none;
+  }
+
+  &--achievements {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  &--travel {
+    padding-left: 49px;
+    padding-right: 49px;
+  }
+
+  &--comment {
+    margin-bottom: 22px;
+  }
+}
+
+.contest-form__list {
+  .reset-ul();
+
+  display: grid;
+
+  &--about,
+  &--contacts {
+    row-gap: 16px;
+  }
+
+  &--achievements {
+    row-gap: 43px;
+  }
+
+  &--travel {
+    row-gap: 36px;
+  }
+}
+
+.contest-form__label {
+  padding-left: 23px;
+  text-transform: uppercase;
+  color: @red-100;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.contest-form__input {
+  .title-5();
+
+  display: block;
+  padding: 14px 20px 15px;
+  width: 100%;
+  border: 2px solid @white-300;
+  border-radius: 1px;
+  font-family: @base-ff;
+  color: @gray-100;
+  outline: none;
+
+  &--textarea {
+    resize: none;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.contest-form__wrap {
+  display: flex;
+  align-items: stretch;
+}
+
+.contest-form__contacts-icon {
+  display: none;
+  flex-shrink: 0;
+  width: 61px;
+  min-height: 100%;
+  border: 0;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background: @white-300 url("../img/main/form/bg-phone-icon.svg") no-repeat center;
+  background-size: 20px 19px;
+
+  &--email {
+    background-image: url("../img/main/form/bg-email-icon.svg");
+    background-size: 18px 13px;
+  }
+}
+
+.contest-form__footer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.contest-form__submit {
+  margin-bottom: 52px;
+}
+
+
+.contest-form__annotation {
+  .reset-indent();
+
+  &-longtext {
+    display: none;
+  }
+}

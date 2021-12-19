@@ -1,0 +1,50 @@
+.contest-form-control {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 0;
+  height: 39px;
+}
+
+.contest-form-control__mark {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: @white-100;
+  border: 2px solid @white-300;
+  border-radius: 1px;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 39px;
+  height: 39px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.contest-form-control__input {
+  &[type="radio"] + .contest-form-control__mark {
+    border-radius: 50%;
+  }
+
+  &[type="radio"]:checked + .contest-form-control__mark::before {
+    background-image: url("../img/main/form/radio-select.svg");
+  }
+
+  &[type="checkbox"]:checked + .contest-form-control__mark::before {
+    background-image: url("../img/main/form/checkbox-select.svg");
+  }
+}
+
+.contest-form-control__label {
+  padding-left: 57px;
+}
