@@ -41,7 +41,7 @@
     </header>
     <main class="page-main">
       <header class="intro">
-        <div class="intro__inner intro__inner--index">
+        <div class="container intro__inner intro__inner--index">
           <h1 class="visually__hidden">Приложение PINK - лучшее приложение</h1>
           <div class="intro-app">
             <p class="intro-app__title">Взгляните на жизнь иначе!</p>
@@ -69,14 +69,14 @@
       </header>
       <section class="advantages">
         <h2 class="visually__hidden">Приложение Пинк - список преимуществ</h2>
-        <div class="advantages__lead-inner">
+        <div class="container advantages__lead-inner">
           <p class="advantages__title">
             Устали от серости мегаполиса?
             <span class="advantages__subtitle">Нам есть, что вам предложить!</span>
           </p>
         </div>
         <div class="advantages__content">
-          <div class="advantages__content-inner">
+          <div class="container advantages__content-inner">
             <ul class="advantages__list">
               <li class="advantages__item">
                 <div class="advantages__item-header">
@@ -90,7 +90,7 @@
                   <img class="advantages__item-preview" src="img/main/iphone-screen-2.png" alt="Изображение с обработкой" width="186" height="382">
                 </div>
                 <h3 class="advantages__item-title">Меняет мир вокруг</h3>
-                <p class="advantages__item-text">Сделайте снимок и украсьте его смайликомили текстовой подписью, чтоб усилить эффект</p>
+                <p class="advantages__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтоб усилить эффект</p>
               </li>
               <li class="advantages__item">
                 <div class="advantages__item-header">
@@ -100,15 +100,24 @@
                 <p class="advantages__item-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
               </li>
             </ul>
-            <img class="advantages__mockup" src="img/main/phone-mockup.png" alt="Экран приложения с эффектами">
+            <picture class="advantages__mockup">
+              <source srcset="../img/main/advantages/advantages-tablet.png"
+                      media="(min-width: 660px)">
+              <img src="../img/main/advantages/advantages-mobile.png" alt="Логотип приложения" />
+          </picture>
           </div>
         </div>
-        <div class="advantages__effect-inner">
-          <div class="advantages-effect advantages__effect">
-            <img class="advantages-effect__logo"src="img/main/timer.svg" width="238" height="276" alt="Логотип часов">
+        <div class="advantages-effect advantages__effect">
+          <div class="container advantages-effect-inner">
+            <picture class="advantages-effect__logo">
+              <source srcset="../img/main/advantages/effect-24-desktop.svg"
+                      media="(min-width: 1200px)">
+              <img src="../img/main/advantages/effect-24-tablet.svg" alt="Логотип эффект 24" />
+            </picture>
             <div class="advantages-effect__content">
               <h3 class="advantages-effect__title">Эффект на 24 часа!</h3>
-              <p class="advantages-effect__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+              <p class="advantages-effect__text">Британские ученые провели исследования и доказали, что&nbsp;положительный эффект от использования приложения
+                длится целые сутки!</p>
               <a class="advantages-effect__link" href="#">Узнать больше об исследовании</a>
             </div>
           </div>
@@ -116,7 +125,7 @@
       </section>
       <section class="reviews">
         <h2 class="visually__hidden">Отзывы о приложении</h2>
-        <div class="reviews__inner">
+        <div class="reviews__inner container">
           <div class="reviews__slider">
             <ul class="reviews__list">
               <li class="reviews__item">
@@ -124,8 +133,7 @@
                   <h3 class="reviews__autor">Николай Петров</h3>
                   <p class="reviews__abount">25 лет, водитель трамвая</p>
                 </div>
-                <p class="reviews__text">"Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
-                  А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!"</p>
+                <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
               </li>
             </ul>
             <ol class="dots reviews__dots">
@@ -247,7 +255,7 @@
         </div>
       </section>
       <section class="contacts">
-        <div class="contacts__inner">
+        <div class="container contacts__inner">
           <h2 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h2>
           <ul class="contacts__list">
             <li class="contacts__item">
@@ -270,7 +278,7 @@
       </section>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__inner">
+      <div class="container page-footer__inner">
         <a class="page-footer__logo">
           <span class="visually__hidden">Pink logo</span>
           <svg class="page-footer__icon" aria-hidden="true" focusable="false" width="145" height="40" viewBox="0 0 145 40" role="img" aria-label="Pink logo" fill="none" xmlns="http://www.w3.org/2000/svg">

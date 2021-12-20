@@ -1,0 +1,11 @@
+.container {
+  .mixin-container (@breakpoint-s; @c-margin-s);
+
+  @media (min-width: @breakpoint-m) {
+    .mixin-container (@breakpoint-m; @c-margin-m);
+  }
+
+  @media (min-width: @breakpoint-l) {
+    .mixin-container (@breakpoint-l; @c-margin-l);
+  }
+}
