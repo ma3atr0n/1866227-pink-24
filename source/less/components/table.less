@@ -4,6 +4,11 @@
 
   @media (min-width: @breakpoint-m) {
     display: table-cell;
+    line-height: 30px;
+  }
+
+  @media (min-width: @breakpoint-m) {
+    .title-5();
   }
 }
 
@@ -13,22 +18,38 @@
   text-transform: uppercase;
   padding: 14px 20px 20px;
 
+  &--option {
+    background-color: transparent;
+  }
+
   @media (min-width: @breakpoint-m) {
     padding-top: 10px;
     padding-bottom: 9px;
     width: 25%;
+  }
+
+  @media (min-width: @breakpoint-l) {
+    padding: 17px 20px 20px;
   }
 }
 
 .table-header__title {
   .reset-indent();
   .title-2();
+
+  @media (min-width: @breakpoint-l) {
+    .title-5();
+  }
 }
 
 .table-header__price {
   .title-5();
 
   font-weight: 300;
+
+  @media (min-width: @breakpoint-l) {
+    font-size: 24px;
+  }
 }
 
 .table__cell {
@@ -41,6 +62,21 @@
 
   @media (min-width: @breakpoint-m) {
     padding: 7px 16px 8px;
+  }
+
+  @media (min-width: @breakpoint-l) {
+    padding: 16px 22px 13px;
+  }
+
+  &--title {
+    @media (min-width: @breakpoint-m) {
+      font-size: 14px;
+      line-height: 30px;
+    }
+
+    @media (min-width: @breakpoint-l) {
+      .title-5();
+    }
   }
 }
 
