@@ -87,7 +87,7 @@
 
 .contacts__item {
   &:last-child {
-    @media (min-width: @breakpoint-m) and (max-width: @breakpoint-l) {
+    @media (min-width: @breakpoint-m) and (max-width: calc(@breakpoint-l -1)) {
       grid-column: 1/3;
       padding: 0 170px;
     }
