@@ -19,10 +19,6 @@
   transition: color 0.2s;
   background-color: transparent;
 
-  &:active {
-    color: fade(@white-100, 30%);
-  }
-
   &--bordered-white {
     border: 3px solid @white-100;
     color: @white-100;
@@ -63,5 +59,9 @@
     &:hover {
       background-color: @green-200;
     }
+  }
+
+  &:active {
+    color: fade(@white-100, 30%);
   }
 }
