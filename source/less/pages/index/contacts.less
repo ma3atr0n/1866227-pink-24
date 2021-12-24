@@ -22,19 +22,17 @@
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    background: url("../img/main/bg-triangle-white-map-2.svg") no-repeat center top;
     height: 33px;
-    background-size: 100% 33px;
+    clip-path: polygon(100% 0, 0 0, 50% 100%);
+    background-color: @white-100;
 
     @media (min-width: @breakpoint-m) {
       height: 68px;
-      background-size: 100% 68px;
       bottom: -101px;
     }
 
     @media (min-width: @breakpoint-m) {
       height: 102px;
-      background-size: 100% 102px;
     }
   }
 
