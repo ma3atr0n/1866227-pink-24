@@ -94,19 +94,6 @@
   }
 }
 
-.reviews__dots {
-  .reset-ul();
-
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-
-  @media (min-width: @breakpoint-l) {
-    display: none;
-  }
-}
-
 .reviews__nav {
   .reset-ul();
 
@@ -125,7 +112,6 @@
 }
 
 .reviews__nav__button {
-  display: flex;
   width: 22px;
   height: 41px;
   border: 0;
@@ -135,11 +121,11 @@
   cursor: pointer;
 
   &--prev {
-    background: url("../img/main/arrow-left.svg") no-repeat top left;
+    background: url("../img/main/arrow-left.svg") no-repeat;
   }
 
   &--next {
-    background: url("../img/main/arrow-right.svg") no-repeat top left;
+    background: url("../img/main/arrow-right.svg") no-repeat;
   }
 }
 

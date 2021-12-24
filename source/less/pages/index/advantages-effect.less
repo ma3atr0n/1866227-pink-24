@@ -1,20 +1,18 @@
 .advantages-effect-inner {
-  display: flex;
-}
-
-.advantages-effect__logo {
-  margin-right: 71px;
-  flex-shrink: 0;
+  display: grid;
+  grid-template-columns: 238px auto;
+  column-gap: 72px;
+  text-align: left;
+  align-items: flex-start;
 
   @media (min-width: @breakpoint-l) {
-    margin-right: 67px;
+    column-gap: 67px;
+    grid-template-columns: 298px auto;
   }
 }
 
 .advantages-effect__content {
-  text-align: start;
   padding-top: 40px;
-  padding-bottom: 23px;
 
   @media (min-width: @breakpoint-l) {
     padding: 91px 40px 0 0;

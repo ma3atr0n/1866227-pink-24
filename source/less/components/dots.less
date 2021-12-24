@@ -1,6 +1,17 @@
 .dots {
+  .reset-ul();
+
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (min-width: @breakpoint-l) {
+    display: none;
+  }
 }
 
 .dots__item {
@@ -21,7 +32,7 @@
   width: 6px;
   height: 6px;
 
-  &--open {
+  &--active {
     width: 12px;
     height: 12px;
     border: 3px solid @gray-100;
