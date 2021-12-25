@@ -1,14 +1,15 @@
-.table {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  border-collapse: collapse;
-  width: 262.5%;
-}
-
 .table-header__cell--option,
 .table__cell--title {
   display: none;
+
+  @media (min-width: @breakpoint-m) {
+    display: table-cell;
+    line-height: 30px;
+  }
+
+  @media (min-width: @breakpoint-m) {
+    .title-5();
+  }
 }
 
 .table-header__cell {
@@ -16,17 +17,39 @@
   color: @white-100;
   text-transform: uppercase;
   padding: 14px 20px 20px;
+
+  &--option {
+    background-color: transparent;
+  }
+
+  @media (min-width: @breakpoint-m) {
+    padding-top: 10px;
+    padding-bottom: 9px;
+    width: 25%;
+  }
+
+  @media (min-width: @breakpoint-l) {
+    padding: 17px 20px 20px;
+  }
 }
 
 .table-header__title {
   .reset-indent();
   .title-2();
+
+  @media (min-width: @breakpoint-l) {
+    .title-5();
+  }
 }
 
 .table-header__price {
   .title-5();
 
   font-weight: 300;
+
+  @media (min-width: @breakpoint-l) {
+    font-size: 24px;
+  }
 }
 
 .table__cell {
@@ -36,11 +59,34 @@
   background-color: @white-100;
   border: 2px solid @white-300;
   border-top-width: 0;
+
+  @media (min-width: @breakpoint-m) {
+    padding: 7px 16px 8px;
+  }
+
+  @media (min-width: @breakpoint-l) {
+    padding: 16px 22px 13px;
+  }
+
+  &--title {
+    @media (min-width: @breakpoint-m) {
+      font-size: 14px;
+      line-height: 30px;
+    }
+
+    @media (min-width: @breakpoint-l) {
+      .title-5();
+    }
+  }
 }
 
 .table__cell-title {
   line-height: 30px;
   text-transform: uppercase;
+
+  @media (min-width: @breakpoint-m) {
+    display: none;
+  }
 }
 
 .table__cell-status {
@@ -50,8 +96,7 @@
   height: 30px;
   top: 13px;
   right: 17px;
-  text-indent: -1000px;
-  overflow: hidden;
+  font-size: 0;
 
   &--on {
     background: url("../img/main/on.svg") no-repeat center;
@@ -62,5 +107,12 @@
     background: url("../img/main/off.svg") no-repeat center;
     background-size: 31px 21px;
   }
-}
 
+  @media (min-width: @breakpoint-m) {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

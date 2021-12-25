@@ -1,5 +1,16 @@
 .intro-app {
-  padding: 28px 20px 38px 20px;
+  padding: 28px 0 38px;
+
+  @media (min-width: @breakpoint-m) {
+    position: relative;
+    padding: 93px 0;
+    width: 300px;
+    z-index: 2;
+  }
+
+  @media (min-width: @breakpoint-l) {
+    padding: 122px 0 109px;
+  }
 }
 
 .intro-app__title {
@@ -7,17 +18,40 @@
   .title-7();
 
   position: absolute;
-  top: 0;
+  top: 29px;
   left: 0;
   right: 0;
-  padding: 29px 20px;
+  padding: 0 20px;
   font-weight: 300;
+
+  @media (min-width: @breakpoint-m) {
+    .title-9();
+
+    position: static;
+    padding: 0 55px;
+    margin-bottom: 28px;
+  }
+
+  @media (min-width: @breakpoint-l) {
+    padding: 0 30px;
+    margin-bottom: 51px;
+    font-size: 50px;
+    line-height: 60px;
+  }
 }
 
 .intro-app__button {
   width: 100%;
   border: 3px solid @white-100;
   margin-bottom: 32px;
+
+  @media (min-width: @breakpoint-m) {
+    margin-bottom: 46px;
+  }
+
+  @media (min-width: @breakpoint-m) {
+    margin-bottom: 67px;
+  }
 }
 
 .intro-app__list {
@@ -32,10 +66,22 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 28px;
+
+  @media (min-width: @breakpoint-m) {
+    margin-bottom: 38px;
+  }
+
+  @media (min-width: @breakpoint-l) {
+    margin-bottom: 55px;
+  }
 }
 
 .intro-app__description {
   .reset-indent();
 
   font-weight: 300;
+
+  @media (min-width: @breakpoint-m) {
+    .title-3();
+  }
 }
