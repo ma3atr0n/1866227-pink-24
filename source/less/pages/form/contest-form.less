@@ -1,3 +1,17 @@
+
+.contest-form {
+  display: grid;
+
+  @media (min-width: @breakpoint-m) {
+    row-gap: 65px;
+  }
+
+  @media (min-width: @breakpoint-l) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 74px;
+  }
+}
+
 //form fieldset
 .contest-form__fieldset {
   .reset-indent();
@@ -10,28 +24,77 @@
 
   &--about {
     padding-top: 0;
+
+    @media (min-width: @breakpoint-m) {
+      padding: 0;
+      order: -3;
+    }
+  }
+
+  &--achievements {
+    @media (min-width: @breakpoint-m) {
+      .form-border();
+      padding: 54px 60px 50px;
+    }
+
+    @media (min-width: @breakpoint-l) {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &--contacts {
+    @media (min-width: @breakpoint-m) {
+      .form-border();
+      padding: 46px 60px 37px;
+      order: -1;
+    }
+
+    @media (min-width: @breakpoint-l) {
+      padding-top: 44px;
+      padding-bottom: 23px;
+      grid-column: 1 / -1;
+    }
+  }
+
+  &--travel {
+    @media (min-width: @breakpoint-m) {
+      .form-border();
+      padding: 54px 60px;
+      order: -2;
+    }
   }
 
   &--comment {
     padding-bottom: 50px;
+
+    @media (min-width: @breakpoint-m) {
+      .form-border();
+      padding: 47px 60px 53px;
+    }
+
+    @media (min-width: @breakpoint-l) {
+      grid-column: 1 / -1;
+    }
   }
 }
 
 .contest-form__fieldset--achievements,
 .contest-form__fieldset--travel {
-  &::before {
-    content: "";
-    position: absolute;
-    width: 100vw;
-    height: 100%;
-    top: 0;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    text-align: center;
-    background-color: @white-200;
-    z-index: -1;
+  @media (max-width: (@breakpoint-m - 1)) {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100vw;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      text-align: center;
+      background-color: @white-200;
+      z-index: -1;
+    }
   }
 }
 
@@ -39,15 +102,17 @@
 .contest-form__legend {
   .reset-indent();
 
-  margin-bottom: 40px;
   text-align: center;
   text-transform: uppercase;
   color: @red-100;
   line-height: 18px;
-  float: left;
 
   &--contacts {
     display: none;
+
+    @media (min-width: @breakpoint-m) {
+      display: block;
+    }
   }
 
   &--achievements {
@@ -63,6 +128,15 @@
   &--comment {
     margin-bottom: 22px;
   }
+
+  @media (max-width: (@breakpoint-m - 1)) {
+    float: left;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: @breakpoint-m) {
+    line-height: 30px;
+  }
 }
 
 .contest-form__list {
@@ -70,13 +144,29 @@
 
   display: grid;
 
-  &--about,
+  &--about {
+    row-gap: 16px;
+  }
+
   &--contacts {
     row-gap: 16px;
+
+    @media (min-width: @breakpoint-m) {
+      row-gap: 28px;
+    }
+
+    @media (min-width: @breakpoint-l) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 74px;
+    }
   }
 
   &--achievements {
     row-gap: 43px;
+
+    @media (min-width: @breakpoint-l) {
+      grid-template-columns: 280px 260px auto;
+    }
   }
 
   &--travel {
@@ -84,12 +174,46 @@
   }
 }
 
+.contest-form__item {
+  &--about {
+    @media (min-width: @breakpoint-m) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &--contacts {
+    @media (min-width: @breakpoint-m) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+}
+
 .contest-form__label {
-  padding-left: 23px;
   text-transform: uppercase;
   color: @red-100;
   line-height: 30px;
   cursor: pointer;
+
+  &--text {
+    @media (max-width: (@breakpoint-m - 1)) {
+      padding-left: 23px;
+    }
+  }
+
+  &--about {
+    @media (min-width: @breakpoint-m) {
+      margin-right: 20px;
+    }
+  }
+
+  &--contacts {
+    @media (min-width: @breakpoint-m) {
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+  }
 }
 
 .contest-form__input {
@@ -106,9 +230,6 @@
 
   &--textarea {
     resize: none;
-    text-align: center;
-    padding-left: 0;
-    padding-right: 0;
   }
 }
 
@@ -135,20 +256,31 @@
 }
 
 .contest-form__footer {
+  min-width: 100%;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-}
+  display: grid;
+  row-gap: 52px;
 
-.contest-form__submit {
-  margin-bottom: 52px;
-}
+  @media (min-width: @breakpoint-m) {
+    grid-template-columns: 300px max-content;
+    justify-content: space-between;
+    align-items: center;
+  }
 
+  @media (min-width: @breakpoint-l) {
+    grid-column: 1 / -1;
+  }
+}
 
 .contest-form__annotation {
   .reset-indent();
+  text-transform: uppercase;
 
   &-longtext {
     display: none;
+
+    @media (min-width: @breakpoint-l) {
+      display: inline;
+    }
   }
 }
