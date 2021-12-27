@@ -20,7 +20,10 @@
 }
 
 .main-nav__logo {
+  .conditions(@red-100, 30%);
+
   display: flex;
+  color: @white-100;
 }
 
 .main-nav__toggle {
@@ -154,15 +157,7 @@
     box-shadow: none;
   }
 
-  &:hover {
-    @media (min-width: @breakpoint-l) {
-      color: @red-100;
-    }
-  }
-
-  &:active {
-    @media (min-width: @breakpoint-l) {
-      color: fade(@white-100, 30%);
-    }
+  @media (min-width: @breakpoint-l) {
+    .conditions(@red-100, 30%);
   }
 }

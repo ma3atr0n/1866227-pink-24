@@ -10,9 +10,10 @@ document.addEventListener('DOMContentLoaded', function() {
     mobileMenu.classList.toggle('main-nav__list--open');
     pageHeader.classList.toggle('page-header--open');
   })
+
 })
 
-function initMap() {
+/*function initMap() {
   const uluru = { lat: 59.9351545, lng: 30.3229178 };
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 17.75,
@@ -22,4 +23,5 @@ function initMap() {
     position: uluru,
     map: map,
   });
-}
+}*/
+

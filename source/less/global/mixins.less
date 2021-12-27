@@ -29,3 +29,16 @@
   }
 }
 
+.conditions(@color, @clarity: 30%) {
+  &:hover:not(&--active) {
+    color: @color;
+  }
+
+  & svg {
+    fill: currentColor;
+  }
+
+  &:active:not(&--active) {
+    color: fade(@color, @clarity);
+  }
+}
