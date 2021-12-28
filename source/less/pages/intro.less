@@ -40,18 +40,44 @@
     }
   }
 
-  &--gallery {
-    padding: 36px 74px 84px;
+  &--inner {
+    padding-top: 28px;
+    padding-bottom: 28px;
+    min-height: 171px;
+
+    @media (min-width: @breakpoint-m) {
+      padding-top: 69px;
+      padding-bottom: 69px;
+      min-height: 330px;
+    }
+
+    @media (min-width: @breakpoint-l) {
+      padding-top: 64px;
+      padding-bottom: 64px;
+      min-height: 284px;
+    }
   }
 
   &--form {
-    padding: 36px 46px 51px;
+    @media (min-width: @breakpoint-l) {
+      padding-top: 90px;
+      padding-bottom: 90px;
+    }
   }
 }
 
 .intro__title {
   .reset-indent();
-  .title-7();
+  .title-8();
 
   font-weight: 300;
+
+  &-line {
+    display: block;
+  }
+
+  @media (min-width: @breakpoint-m) {
+    font-size: 50px;
+    line-height: 68px;
+  }
 }

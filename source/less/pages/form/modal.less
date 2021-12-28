@@ -1,0 +1,127 @@
+.modal {
+  text-align: center;
+  border-radius: 1px;
+  box-shadow:
+    0 15px 15px -15px rgba(0, 1, 1, 0.15),
+    0 -15px 15px -15px rgba(0, 1, 1, 0.15);
+  padding: 0 20px;
+
+  @media (min-width: @breakpoint-m) {
+    width: 460px;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 5px;
+    box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  }
+
+  @media (min-width: @breakpoint-l) {
+    width: 780px;
+  }
+}
+
+.modal__title {
+  .reset-indent();
+  .title-3();
+
+  padding-top: 44px;
+  margin-bottom: 37px;
+
+  @media (min-width: @breakpoint-m) {
+    font-size: 30px;
+    line-height: 40px;
+    padding: 49px 100px 0;
+  }
+}
+
+.modal__description {
+  .reset-indent();
+
+  @media (min-width: @breakpoint-m) {
+    font-size: 18px;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  @media (min-width: @breakpoint-l) {
+    padding-left: 183px;
+    padding-right: 183px;
+  }
+
+  &--success {
+    padding-bottom: 41px;
+
+    @media (min-width: @breakpoint-m) {
+      padding-bottom: 35px;
+    }
+
+    @media (min-width: @breakpoint-l) {
+      padding-bottom: 44px;
+    }
+  }
+
+  &--error {
+    padding-bottom: 50px;
+
+    @media (min-width: @breakpoint-m) {
+      padding-bottom: 40px;
+    }
+
+    @media (min-width: @breakpoint-l) {
+      padding-bottom: 68px;
+    }
+  }
+}
+
+.modal__overlay {
+  position: relative;
+  padding: 52px 0;
+
+  @media (min-width: @breakpoint-m) {
+    padding-right: 82px;
+    padding-left: 82px;
+  }
+
+  &--success {
+    @media (min-width: @breakpoint-m) {
+      background-color: @white-200;
+    }
+
+    @media (min-width: @breakpoint-l) {
+      padding-right: 162px;
+      padding-left: 162px;
+    }
+  }
+
+  &--success::before {
+    @media (max-width: (@breakpoint-m - 1)) {
+      content: "";
+      position: absolute;
+      width: 100vw;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      text-align: center;
+      background-color: @white-200;
+      z-index: -1;
+    }
+  }
+
+  &--error {
+    @media (max-width: (@breakpoint-l - 1)) {
+      padding-top: 0;
+    }
+
+    @media (min-width: @breakpoint-l) {
+      background-color: @white-200;
+      padding-right: 242px;
+      padding-left: 242px;
+    }
+  }
+}
+
+.modal__button {
+  width: 100%;
+}
