@@ -5,7 +5,6 @@
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="js/scripts.js"></script>
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -46,7 +45,7 @@
       </header>
       <section class="container contest">
         <h2 class="visually__hidden">Описание поездки по форме</h2>
-        <p class="contest__lead">Поделитесь своей историей и получите
+        <p class="contest__lead section-lead">Поделитесь своей историей и получите
           шанс выиграть ценный приз — 1000
           миль на вашу бонусную карту!
         <span class="contest__lead-addon">Пожалуйста, заполните форму ниже:</span></p>
@@ -165,8 +164,10 @@
           </fieldset>
           <fieldset class="contest-form__fieldset contest-form__fieldset--comment">
             <legend class="contest-form__legend contest-form__legend--comment">Опишите ваши эмоции</legend>
-            <label class="visually__hidden contest-form__label" for="comment-textarea">Опишите ваши впечатления</label>
-            <textarea class="contest-form__input contest-form__input--textarea" id='comment-textarea' rows="6" cols="30" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            <label class="contest-form__label contest-form__label--textarea">
+              <span class="visually__hidden">Опишите ваши впечатления</span>
+              <textarea class="contest-form__input contest-form__input--textarea" id='comment-textarea' placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            </label>
           </fieldset>
           <div class="contest-form__footer">
             <button class="button button--green contest-form__submit" type="submit">Отправить форму</button>
@@ -221,6 +222,7 @@
         </a>
       </div>
     </footer>
+    <script src="js/scripts.js"></script>
     <div class="modal modal-success">
       <h2 class="modal__title">Ваша заявка отправлена</h2>
       <p class="modal__description modal__description--success">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим&nbsp;вас.</p>

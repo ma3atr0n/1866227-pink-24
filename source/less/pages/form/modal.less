@@ -4,7 +4,7 @@
   box-shadow:
     0 15px 15px -15px rgba(0, 1, 1, 0.15),
     0 -15px 15px -15px rgba(0, 1, 1, 0.15);
-  padding: 0 20px;
+  padding: 44px 20px 0;
 
   @media (min-width: @breakpoint-m) {
     width: 460px;
@@ -23,7 +23,6 @@
   .reset-indent();
   .title-3();
 
-  padding-top: 44px;
   margin-bottom: 37px;
 
   @media (min-width: @breakpoint-m) {
@@ -48,26 +47,26 @@
   }
 
   &--success {
-    padding-bottom: 41px;
+    margin-bottom: 41px;
 
     @media (min-width: @breakpoint-m) {
-      padding-bottom: 35px;
+      margin-bottom: 35px;
     }
 
     @media (min-width: @breakpoint-l) {
-      padding-bottom: 44px;
+      margin-bottom: 44px;
     }
   }
 
   &--error {
-    padding-bottom: 50px;
+    margin-bottom: 50px;
 
     @media (min-width: @breakpoint-m) {
-      padding-bottom: 40px;
+      margin-bottom: 40px;
     }
 
     @media (min-width: @breakpoint-l) {
-      padding-bottom: 68px;
+      margin-bottom: 68px;
     }
   }
 }
@@ -82,6 +81,10 @@
   }
 
   &--success {
+    @media (max-width: (@breakpoint-m - 1)) {
+      .bg-gray-full();
+    }
+
     @media (min-width: @breakpoint-m) {
       background-color: @white-200;
     }
@@ -89,23 +92,6 @@
     @media (min-width: @breakpoint-l) {
       padding-right: 162px;
       padding-left: 162px;
-    }
-  }
-
-  &--success::before {
-    @media (max-width: (@breakpoint-m - 1)) {
-      content: "";
-      position: absolute;
-      width: 100vw;
-      height: 100%;
-      top: 0;
-      left: 50%;
-      right: 50%;
-      margin-left: -50vw;
-      margin-right: -50vw;
-      text-align: center;
-      background-color: @white-200;
-      z-index: -1;
     }
   }
 
