@@ -4,8 +4,13 @@
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" href="css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../favicon.ico">
+    <link rel="icon" href="img/favicons/favicon-32x32.svg" type="image/svg+xml">
 
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="../manifest.webmanifest">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -79,30 +84,30 @@
             <ul class="advantages__list">
               <li class="advantages__item">
                 <div class="advantages__item-header">
-                  <img class="advantages__item-preview" src="img/main/iphone-screen-1.png" alt="Изображение без обработки" width="186" height="382">
+                  <img class="advantages__item-preview" src="img/main/advantages/iphone-screen-1.png" srcset="img/main/advantages/iphone-screen-1@2x.png 2x" width="186" height="382" alt="Логотип приложения" />
                 </div>
                 <h3 class="advantages__item-title">Поднимает настроение</h3>
                 <p class="advantages__item-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
               </li>
               <li class="advantages__item">
                 <div class="advantages__item-header">
-                  <img class="advantages__item-preview" src="img/main/iphone-screen-2.png" alt="Изображение с обработкой" width="186" height="382">
+                  <img class="advantages__item-preview" src="img/main/advantages/iphone-screen-2.png" srcset="img/main/advantages/iphone-screen-2@2x.png 2x" alt="Изображение с обработкой" width="186" height="382">
                 </div>
                 <h3 class="advantages__item-title">Меняет мир вокруг</h3>
                 <p class="advantages__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтоб усилить эффект</p>
               </li>
               <li class="advantages__item">
                 <div class="advantages__item-header">
-                  <img class="advantages__item-preview" src="img/main/iphone-screen-3.png" alt="Изображение со смайликом" width="186" height="382">
+                  <img class="advantages__item-preview" src="img/main/advantages/iphone-screen-3.png" srcset="img/main/advantages/iphone-screen-3@2x.png 2x" alt="Изображение со смайликом" width="186" height="382">
                 </div>
                 <h3 class="advantages__item-title">Заводит новых друзей</h3>
                 <p class="advantages__item-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
               </li>
             </ul>
-            <picture class="advantages__mockup">
-              <source srcset="../img/main/advantages/advantages-tablet.png"
-                      media="(min-width: 660px)">
-              <img src="../img/main/advantages/advantages-mobile.png" alt="Логотип приложения" />
+            <picture>
+              <source media="(min-width: 660px)"
+                srcset="img/main/advantages/advantages-tablet.png 1x, img/main/advantages/advantages-tablet@2x.png 2x">
+              <img class="advantages__mockup" src="img/main/advantages/advantages-mobile.png" srcset="img/main/advantages/advantages-mobile@2x.png 2x" alt="Логотип приложения" />
           </picture>
           </div>
         </div>
@@ -324,6 +329,5 @@
     </footer>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=9d5ab891-2543-4264-9b5e-30db0e5546d1&lang=ru_RU"></script>
     <script src="js/scripts.js"></script>
-    <script src="js/map.js"></script>
   </body>
 </html>
