@@ -47,9 +47,9 @@
 }
 
 //Conditions
-.conditions(@color, @clarity: 30%) {
+.conditions(@color-1, @color-2: @color-1, @clarity: 30%) {
   &:hover:not(&--active) {
-    color: @color;
+    color: @color-1;
   }
 
   & svg {
@@ -57,7 +57,7 @@
   }
 
   &:active:not(&--active) {
-    color: fade(@color, @clarity);
+    color: fade(@color-2, @clarity);
   }
 }
 

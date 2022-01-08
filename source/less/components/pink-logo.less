@@ -1,0 +1,69 @@
+.pink-logo {
+  display: flex;
+  fill: @white-100;
+
+  &--header {
+    display: none;
+
+    @media (min-width: @breakpoint-m) {
+      display: flex;
+    }
+  }
+
+  &--header-mobile {
+    @media (min-width: @breakpoint-m) {
+      display: none;
+    }
+  }
+
+  &:hover:not(:active) > * {
+    fill: @red-100;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.pink-logo__pink {
+  &--footer {
+    fill: @gray-100;
+  }
+}
+
+.pink-logo__glasses {
+  display: block;
+
+  &--footer {
+    fill: @red-100;
+  }
+
+  @media (min-width: @breakpoint-l) {
+    display: none;
+  }
+}
+
+.pink-logo__glasses-w-hole {
+  display: none;
+
+  @media (min-width: @breakpoint-l) {
+    display: block;
+
+    &--footer {
+      fill: @red-100;
+    }
+  }
+}
+
+.pink-logo__star {
+  display: none;
+
+  @media (min-width: @breakpoint-l) {
+    display: block;
+    fill: @red-100;
+
+    &--footer {
+      fill: @gray-100;
+    }
+  }
+}

@@ -38,5 +38,13 @@
     border: 3px solid @gray-100;
     background-color: transparent;
   }
+
+  &:hover:not(&--active) {
+    background-color: fade(@gray-100, 60%);
+  }
+
+  &:active:not(&--active) {
+    background-color: fade(@gray-100, 10%);
+  }
 }
 

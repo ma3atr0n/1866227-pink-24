@@ -119,6 +119,8 @@
   padding: 0;
   background-size: 22px 41px;
   cursor: pointer;
+  fill: @gray-100;
+  opacity: 0.3;
 
   &--prev {
     background: url("../img/main/arrow-left.svg") no-repeat;
@@ -126,6 +128,14 @@
 
   &--next {
     background: url("../img/main/arrow-right.svg") no-repeat;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
   }
 }
 
