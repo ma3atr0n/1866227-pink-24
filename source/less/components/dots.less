@@ -21,6 +21,15 @@
   width: 24px;
   height: 24px;
   cursor: pointer;
+
+
+  &:hover > .dots__button:not(&--active) {
+    background-color: fade(@gray-100, 60%);
+  }
+
+  &:active > .dots__button:not(&--active) {
+    background-color: fade(@gray-100, 10%);
+  }
 }
 
 .dots__button {

@@ -19,6 +19,10 @@
   transition: color 0.2s;
   background-color: transparent;
 
+  &:active {
+    color: fade(@white-100, 30%);
+  }
+
   &--bordered-white {
     border: 3px solid @white-100;
     color: @white-100;
@@ -33,19 +37,40 @@
       background-color: @white-100;
       color: @red-100;
     }
+
+    &:active {
+      color: fade(@red-100, 30%);
+    }
   }
 
   &--bordered-red {
     border: 3px solid @red-100;
     color: @red-100;
 
-    &:active {
-      color: fade(@red-100, 30%);
-    }
-
     &:hover {
       background-color: @red-100;
       color: @white-100;
+    }
+
+    &:active {
+      background-color: @red-100;
+      color: fade(@white-100, 30%);
+    }
+  }
+
+  &--bordered-gray {
+    border: 3px solid fade(@gray-100, 10%);
+    color: fade(@gray-100, 10%);
+
+    &:hover {
+      border-color: fade(@gray-100, 30%);
+      color: fade(@gray-100, 30%);
+    }
+
+    &:active {
+      border-color: transparent;
+      background-color: fade(@gray-100, 30%);
+      color: fade(@white-100, 30%);
     }
   }
 
@@ -59,9 +84,5 @@
     &:hover {
       background-color: @green-200;
     }
-  }
-
-  &:active {
-    color: fade(@white-100, 30%);
   }
 }

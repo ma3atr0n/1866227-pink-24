@@ -40,7 +40,11 @@
 }
 
 .editor-controls__tool-icon {
-  fill: fade(#283645, 30%);
+  fill: fade(@gray-100, 30%);
+
+  &:hover:not(&--active) {
+    fill: fade(@gray-100, 50%);
+  }
 
   &--active {
     fill: @red-100;
@@ -58,6 +62,10 @@
 
   @media (min-width: @breakpoint-m) {
     fill: @red-100;
+
+    &:hover:not(&--active) {
+      fill: @red-100;
+    }
   }
 }
 

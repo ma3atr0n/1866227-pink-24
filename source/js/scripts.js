@@ -1,27 +1,44 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const mobileToggle = document.querySelector('.main-nav__toggle');
-  const mobileMenu = document.querySelector('.main-nav__list');
-  const pageHeader = document.querySelector('.page-header');
+
+  //Mobile menu
+  if (document.querySelector('.page-header')) {
+    const mobileToggle = document.querySelector('.main-nav__toggle');
+    const mobileMenu = document.querySelector('.main-nav__list');
+    const pageHeader = document.querySelector('.page-header');
 
 
-  mobileToggle.addEventListener("click", function (e) {
-    mobileToggle.classList.toggle('main-nav__toggle--open');
-    mobileToggle.classList.toggle('main-nav__toggle--closed');
-    mobileMenu.classList.toggle('main-nav__list--open');
-    pageHeader.classList.toggle('page-header--open');
-  })
+    mobileToggle.addEventListener("click", function (e) {
+      mobileToggle.classList.toggle('main-nav__toggle--open');
+      mobileToggle.classList.toggle('main-nav__toggle--closed');
+      mobileMenu.classList.toggle('main-nav__list--open');
+      pageHeader.classList.toggle('page-header--open');
+    })
+  }
+
+  //Map
+  if (document.querySelector('.map')) {
+    ymaps.ready(init);
+
+    const center = [59.93879, 30.323118];
+
+    function init(){
+        let map = new ymaps.Map("map", {
+            center: center,
+            zoom: 17,
+            controls: ['zoomControl']
+        });
+
+        let placemark = new ymaps.Placemark([59.938635, 30.323118], {}, {
+          iconLayout: 'default#image',
+          iconImageHref: '../img/main/map-marker.png',
+          iconImageSize: [36, 36]
+        });
+
+        map.geoObjects.add(placemark);
+    }
+  }
 
 })
 
-/*function initMap() {
-  const uluru = { lat: 59.9351545, lng: 30.3229178 };
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 17.75,
-    center: uluru,
-  });
-  const marker = new google.maps.Marker({
-    position: uluru,
-    map: map,
-  });
-}*/
+
 

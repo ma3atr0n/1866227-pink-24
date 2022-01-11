@@ -2,17 +2,17 @@
   display: flex;
   align-items: center;
   position: relative;
-  margin: 0;
-  height: 39px;
+  min-height: 39px;
+  padding-left: 57px;
 }
 
 .contest-form-control__mark {
+  .conditions-border();
+
   content: "";
   position: absolute;
-  display: block;
   background-color: @white-100;
   border: 2px solid @white-300;
-  border-radius: 1px;
   z-index: 1;
   top: 0;
   left: 0;
@@ -22,7 +22,6 @@
   &::before {
     content: "";
     position: absolute;
-    display: block;
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: center;
@@ -43,12 +42,15 @@
   &[type="checkbox"]:checked + .contest-form-control__mark::before {
     background-image: url("../img/main/form/checkbox-select.svg");
   }
+
+  &:focus + .contest-form-control__mark {
+    border-color: @gray-100;
+  }
 }
 
 .contest-form-control__label {
   .title-5();
 
-  padding-left: 57px;
   color: @gray-100;
   text-transform: none;
 }
