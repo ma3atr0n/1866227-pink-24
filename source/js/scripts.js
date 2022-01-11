@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     mobileToggle.addEventListener("click", function (e) {
-     mobileToggle.classList.toggle('main-nav__toggle--open');
+      mobileToggle.classList.toggle('main-nav__toggle--open');
       mobileToggle.classList.toggle('main-nav__toggle--closed');
       mobileMenu.classList.toggle('main-nav__list--open');
       pageHeader.classList.toggle('page-header--open');
