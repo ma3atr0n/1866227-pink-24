@@ -32,10 +32,21 @@
 
 .editor__content {
   background-color: @white-200;
+  padding-top: 20px;
+  padding-bottom: 38px;
+
+  @media (min-width: @breakpoint-m) {
+    padding-top: 57px;
+    padding-bottom: 54px;
+  }
+
+  @media (min-width: @breakpoint-l) {
+    padding: 0;
+    background-color: transparent;
+  }
 }
 
 .editor__form {
-  padding-top: 20px;
   display: grid;
   row-gap: 42px;
   background-color: @white-200;
@@ -43,8 +54,6 @@
   @media (min-width: @breakpoint-m) {
     grid-template-columns: 300px auto;
     column-gap: 45px;
-    padding-top: 57px;
-    padding-bottom: 54px;
   }
 
   @media (min-width: @breakpoint-l) {
@@ -59,7 +68,6 @@
 
   position: relative;
   padding-top: 38px;
-  padding-bottom: 38px;
   width: 100%;
   display: grid;
   row-gap: 12px;
@@ -100,10 +108,5 @@
   &-upload,
   &-reset {
     width: 100%;
-  }
-
-  &-reset {
-    border-color: fade(@gray-100, 10%);
-    color: fade(@gray-100, 10%);
   }
 }

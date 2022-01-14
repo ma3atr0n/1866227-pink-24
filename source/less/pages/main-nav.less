@@ -19,13 +19,6 @@
   }
 }
 
-.main-nav__logo {
-  .conditions(@red-100, 30%);
-
-  display: flex;
-  color: @white-100;
-}
-
 .main-nav__toggle {
   .reset-indent();
 
@@ -140,6 +133,7 @@
 
 .main-nav__link {
   .reset-decoration();
+  .conditions(@red-100);
 
   display: block;
   margin: 0;
@@ -155,9 +149,6 @@
     padding: 16px 0;
     background-color: transparent;
     box-shadow: none;
-  }
-
-  @media (min-width: @breakpoint-l) {
-    .conditions(@red-100, 30%);
+    .conditions(@red-100; @white-100; 30%);
   }
 }

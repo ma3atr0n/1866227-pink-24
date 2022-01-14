@@ -115,4 +115,13 @@
 
   color: @red-100;
   font-weight: 300;
+
+  &[href]:hover {
+    text-decoration: underline;
+    color: @gray-100;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
 }

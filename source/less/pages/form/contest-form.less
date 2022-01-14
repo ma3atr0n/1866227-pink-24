@@ -1,8 +1,7 @@
 
 .contest-form {
-  display: grid;
-
   @media (min-width: @breakpoint-m) {
+    display: grid;
     row-gap: 65px;
   }
 
@@ -17,6 +16,7 @@
   .reset-indent();
 
   display: grid;
+  align-items: flex-start;
   position: relative;
   border: 0;
   padding-top: 42px;
@@ -33,8 +33,7 @@
 
   &--achievements {
     @media (min-width: @breakpoint-m) {
-      .form-border();
-      padding: 54px 60px 50px;
+      padding: 0;
     }
 
     @media (min-width: @breakpoint-l) {
@@ -44,22 +43,18 @@
 
   &--contacts {
     @media (min-width: @breakpoint-m) {
-      .form-border();
-      padding: 46px 60px 37px;
+      padding: 0;
       order: -1;
     }
 
     @media (min-width: @breakpoint-l) {
-      padding-top: 44px;
-      padding-bottom: 23px;
       grid-column: 1 / -1;
     }
   }
 
   &--travel {
     @media (min-width: @breakpoint-m) {
-      .form-border();
-      padding: 54px 60px;
+      padding: 0;
       order: -2;
     }
   }
@@ -68,12 +63,17 @@
     padding-bottom: 50px;
 
     @media (min-width: @breakpoint-m) {
-      .form-border();
-      padding: 47px 60px 53px;
+      padding: 0;
     }
 
     @media (min-width: @breakpoint-l) {
       grid-column: 1 / -1;
+    }
+  }
+
+  @media (min-width: @breakpoint-m) {
+    &:not(&--about) {
+      .form-border();
     }
   }
 }
@@ -81,20 +81,7 @@
 .contest-form__fieldset--achievements,
 .contest-form__fieldset--travel {
   @media (max-width: (@breakpoint-m - 1)) {
-    &::before {
-      content: "";
-      position: absolute;
-      width: 100vw;
-      height: 100%;
-      top: 0;
-      left: 50%;
-      right: 50%;
-      margin-left: -50vw;
-      margin-right: -50vw;
-      text-align: center;
-      background-color: @white-200;
-      z-index: -1;
-    }
+    .bg-gray-full();
   }
 }
 
@@ -106,6 +93,8 @@
   text-transform: uppercase;
   color: @red-100;
   line-height: 18px;
+  float: left;
+  margin-bottom: 40px;
 
   &--contacts {
     display: none;
@@ -136,6 +125,8 @@
 
   @media (min-width: @breakpoint-m) {
     line-height: 30px;
+    float: none;
+    margin-bottom: 0;
   }
 }
 
@@ -145,17 +136,28 @@
   display: grid;
 
   &--about {
-    row-gap: 16px;
+    row-gap: 29px;
+
+    @media (min-width: @breakpoint-m) {
+      row-gap: 56px;
+    }
+
+    @media (min-width: @breakpoint-l) {
+      padding-top: 28px;
+    }
   }
 
   &--contacts {
     row-gap: 16px;
 
     @media (min-width: @breakpoint-m) {
+      padding: 46px 60px 37px;
       row-gap: 28px;
     }
 
     @media (min-width: @breakpoint-l) {
+      padding-top: 44px;
+      padding-bottom: 23px;
       grid-template-columns: repeat(2, 1fr);
       column-gap: 74px;
     }
@@ -164,6 +166,10 @@
   &--achievements {
     row-gap: 43px;
 
+    @media (min-width: @breakpoint-m) {
+      padding: 54px 60px 50px;
+    }
+
     @media (min-width: @breakpoint-l) {
       grid-template-columns: 280px 260px auto;
     }
@@ -171,6 +177,10 @@
 
   &--travel {
     row-gap: 36px;
+
+    @media (min-width: @breakpoint-m) {
+      padding: 54px 60px;
+    }
   }
 }
 
@@ -195,6 +205,7 @@
   color: @red-100;
   line-height: 30px;
   cursor: pointer;
+  display: block;
 
   &--text {
     @media (max-width: (@breakpoint-m - 1)) {
@@ -214,10 +225,17 @@
       margin-top: 10px;
     }
   }
+
+  &--textarea {
+    @media (min-width: @breakpoint-m) {
+      padding: 47px 60px 53px;
+    }
+  }
 }
 
 .contest-form__input {
   .title-5();
+  .conditions-border();
 
   display: block;
   padding: 14px 20px 15px;
@@ -227,15 +245,24 @@
   font-family: @base-ff;
   color: @gray-100;
   outline: none;
+  transition: transform 0.25s ease;
 
   &--textarea {
     resize: none;
+    min-height: 197px;
+
+    @media (min-width: @breakpoint-m) {
+      min-height: 189px;
+    }
+
+    @media (min-width: @breakpoint-l) {
+      min-height: 124px;
+    }
   }
 }
 
 .contest-form__wrap {
   display: flex;
-  align-items: stretch;
 }
 
 .contest-form__contacts-icon {
@@ -253,10 +280,14 @@
     background-image: url("../img/main/form/bg-email-icon.svg");
     background-size: 18px 13px;
   }
+
+  @media (min-width: @breakpoint-m) {
+    display: block;
+  }
 }
 
 .contest-form__footer {
-  min-width: 100%;
+  //min-width: 100%;
   text-align: center;
   display: grid;
   row-gap: 52px;
