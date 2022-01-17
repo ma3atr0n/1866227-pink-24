@@ -2,6 +2,12 @@
   display: flex;
   fill: @white-100;
 
+  &--header-mobile {
+    @media (min-width: @breakpoint-m) {
+      display: none;
+    }
+  }
+
   &--header {
     display: none;
 
@@ -10,13 +16,7 @@
     }
   }
 
-  &--header-mobile {
-    @media (min-width: @breakpoint-m) {
-      display: none;
-    }
-  }
-
-  &:hover:not(:active) > * {
+  &:hover:not(:active) * > {
     fill: @red-100;
   }
 
@@ -32,38 +32,32 @@
 }
 
 .pink-logo__glasses {
-  display: block;
+  @media (min-width: @breakpoint-l) {
+    display: none;
+  }
 
   &--footer {
     fill: @red-100;
   }
 
-  @media (min-width: @breakpoint-l) {
+  &--w-hole {
     display: none;
-  }
-}
 
-.pink-logo__glasses-w-hole {
-  display: none;
-
-  @media (min-width: @breakpoint-l) {
-    display: block;
-
-    &--footer {
-      fill: @red-100;
+    @media (min-width: @breakpoint-l) {
+      display: block;
     }
   }
 }
 
 .pink-logo__star {
+  fill: @red-100;
   display: none;
 
   @media (min-width: @breakpoint-l) {
     display: block;
-    fill: @red-100;
+  }
 
-    &--footer {
-      fill: @gray-100;
-    }
+  &--footer {
+    fill: @gray-100;
   }
 }
