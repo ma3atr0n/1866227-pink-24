@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
             controls: ['zoomControl']
         });
 
-        let placemark = new ymaps.Placemark([59.938635, 30.323118], {}, {
+        let placemark = new ymaps.Placemark([59.938615, 30.323040], {}, {
           iconLayout: 'default#image',
           iconImageHref: '../img/main/map-marker.png',
           iconImageSize: [36, 36]

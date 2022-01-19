@@ -16,7 +16,7 @@
   background-color: @gray-100;
   color: @white-100;
   text-transform: uppercase;
-  padding: 14px 20px 20px;
+  padding: 12px 20px 30px;
 
   &--option {
     background-color: transparent;
@@ -30,6 +30,11 @@
 
   @media (min-width: @breakpoint-l) {
     padding: 17px 20px 20px;
+  }
+
+  & + .table-header__cell {
+    border-left: 2px solid @white-200;
+    border-right: 2px solid @white-200;
   }
 }
 
@@ -45,6 +50,8 @@
 .table-header__price {
   .title-5();
 
+  line-height: 24px;
+
   font-weight: 300;
 
   @media (min-width: @breakpoint-l) {
@@ -55,7 +62,7 @@
 .table__cell {
   position: relative;
   align-items: center;
-  padding: 17px 68px 18px 22px;
+  padding: 14px 68px 15px 20px;
   background-color: @white-100;
   border: 2px solid @white-300;
   border-top-width: 0;
@@ -94,7 +101,7 @@
   display: block;
   width: 31px;
   height: 30px;
-  top: 13px;
+  top: 14px;
   right: 17px;
   font-size: 0;
 
@@ -106,7 +113,7 @@
 
   &--off {
     background: url("../img/main/off.svg") no-repeat center;
-    background-size: 31px 21px;
+    background-size: 27px 27px;
   }
 
   @media (min-width: @breakpoint-m) {

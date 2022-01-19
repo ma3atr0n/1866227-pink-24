@@ -1,6 +1,6 @@
 .contacts {
   text-align: center;
-  padding-top: 50px;
+  padding-top: 41px;
 
   @media (min-width: @breakpoint-l) {
     padding-top: 65px;
@@ -8,7 +8,7 @@
 }
 
 .contacts__inner {
-  padding-bottom: 31px;
+  padding-bottom: 35px;
   position: relative;
 
   &::after {
@@ -16,7 +16,7 @@
     display: block;
     position: absolute;
     z-index: 1;
-    bottom: -32px;
+    bottom: -33px;
     width: 100vw;
     left: 50%;
     right: 50%;
@@ -51,7 +51,7 @@
   .title-7();
 
   font-weight: 300;
-  margin-bottom: 45px;
+  margin-bottom: 34px;
 
   @media (min-width: @breakpoint-m) {
     //padding: 0 125px;
@@ -74,7 +74,7 @@
   .reset-ul();
 
   display: grid;
-  row-gap: 23px;
+  row-gap: 18px;
 
   @media (min-width: @breakpoint-m) {
     grid-template-columns: 1fr 1fr;
@@ -89,6 +89,7 @@
 
 .contacts__item {
   &:last-child {
+    margin-top: 4px;
     @media (min-width: @breakpoint-m) and (max-width: (@breakpoint-l - 1)) {
       grid-column: 1/3;
       padding: 0 170px;
@@ -104,6 +105,7 @@
 
 .contacts__item-title {
   .reset-indent();
+
   font-size: 18px;
   line-height: 25px;
 }
@@ -115,6 +117,7 @@
 
   color: @red-100;
   font-weight: 300;
+  line-height: 32px;
 
   &[href]:hover {
     text-decoration: underline;

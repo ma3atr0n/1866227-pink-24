@@ -1,3 +1,11 @@
 #map {
-  min-height: 374px;
+  height: 200px;
+
+  @media (min-width: @breakpoint-m) {
+    height: 374px;
+  }
+
+  @media (min-width: @breakpoint-l) {
+    height: 502px;
+  }
 }

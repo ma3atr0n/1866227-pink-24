@@ -24,7 +24,7 @@
 
 .page-footer__logo {
   display: block;
-  margin-bottom: 41px;
+  margin-bottom: 38px;
   cursor: pointer;
 
   @media (min-width: @breakpoint-m) {
@@ -35,12 +35,12 @@
 .social {
   .reset-ul();
 
-  width: 182px;
+  width: 178px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 41px;
+  margin-bottom: 38px;
 
   @media (min-width: @breakpoint-m) {
     margin-bottom: 0;
@@ -51,8 +51,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 48px;
-  height: 48px;
+  width: 54px;
+  height: 54px;
   border: 3px solid fade(@gray-100, 10%);
   border-radius: 50%;
 
@@ -69,6 +69,12 @@
   }
 }
 
+.social__icon {
+  &--youtube {
+    margin-left: 4px;
+  }
+}
+
 .page-footer__production {
   .reset-decoration();
   .conditions(@gray-100);
@@ -80,7 +86,7 @@
 }
 
 .page-footer__production-text {
-  line-height: 18px;
+  line-height: 19px;
   color: @gray-100;
   margin-right: 15px;
 }
