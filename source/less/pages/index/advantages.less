@@ -7,7 +7,7 @@
   }
 
   @media (min-width: @breakpoint-l) {
-    padding-top: 68px;
+    padding-top: 62px;
   }
 }
 
@@ -21,6 +21,11 @@
     font-size: 40px;
     line-height: 54px;
   }
+
+  @media (min-width: @breakpoint-l) {
+    font-size: 50px;
+    line-height: 68px;
+  }
 }
 
 .advantages__subtitle {
@@ -30,6 +35,10 @@
   @media (min-width: @breakpoint-m) {
     max-width: 355px;
     margin: 0 auto;
+  }
+
+  @media (min-width: @breakpoint-l) {
+    max-width: 420px;
   }
 }
 
@@ -41,7 +50,7 @@
   }
 
   @media (min-width: @breakpoint-l) {
-    margin-bottom: 75px;
+    margin-bottom: 51px;
   }
 }
 
@@ -59,6 +68,12 @@
 
   @media (min-width: @breakpoint-l) {
     padding-top: 0;
+  }
+
+  &::before {
+    @media (min-width: @breakpoint-l) {
+      height: 100px;
+    }
   }
 }
 
@@ -93,15 +108,38 @@
 
   @media (min-width: @breakpoint-l) {
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 20px;
+    column-gap: 28px;
     grid-template-rows: none;
     text-align: center;
+    padding-top: 6px;
   }
 }
 
-.advantages__item:last-child {
-  @media (min-width: @breakpoint-m) {
-    margin-top: 1px;
+.advantages__item {
+  &:last-child {
+    @media (min-width: @breakpoint-m) {
+      margin-top: 1px;
+    }
+
+    @media (min-width: @breakpoint-l) {
+      margin-top: 0;
+
+      & .advantages__item-title,
+      & .advantages__item-text {
+        padding-left: 27px;
+        padding-right: 33px;
+      }
+    }
+  }
+
+  &:first-child {
+    @media (min-width: @breakpoint-l) {
+      & .advantages__item-title,
+      & .advantages__item-text {
+        padding-left: 31px;
+        padding-right: 25px;
+      }
+    }
   }
 }
 
@@ -113,7 +151,7 @@
     position: relative;
     overflow: hidden;
     height: 301px;
-    margin-bottom: 59px;
+    margin-bottom: 56px;
 
     &::after {
       position: absolute;
@@ -145,6 +183,7 @@
     font-size: 30px;
     line-height: 30px;
     padding: 0 30px;
+    margin-bottom: 22px;
   }
 }
 
@@ -154,7 +193,7 @@
   @media (min-width: @breakpoint-l) {
     font-size: 18px;
     line-height: 30px;
-    padding: 0 30px;
+    padding: 0 23px;
   }
 }
 
@@ -182,7 +221,7 @@
 
   @media (min-width: @breakpoint-l) {
     display: block;
-    padding-top: 76px;
+    padding-top: 70px;
     padding-bottom: 67px;
     background-color: @white-200;
   }
