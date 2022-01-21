@@ -6,16 +6,21 @@
   .bg-triangle-1();
 
   position: relative;
-  padding-top: 101px;
+  padding-top: 99px;
   padding-bottom: 40px;
   overflow-x: hidden;
+  background-color: @white-200;
 
   &::before {
-    background-size: 100% 18px;
+    height: 18px;
+
+    @media (min-width: @breakpoint-m) {
+      height: 41px;
+    }
   }
 
   @media (min-width: @breakpoint-m) {
-    padding-top: 88px;
+    padding-top: 96px;
     padding-bottom: 68px;
   }
 
@@ -30,12 +35,19 @@
 }
 
 .price__inner {
+
   position: relative;
   padding-bottom: 58px;
 
   @media (min-width: @breakpoint-m) {
     .container();
+
     padding-bottom: 0;
+  }
+
+  @media (min-width: @breakpoint-m) {
+    padding-left: 21px;
+    padding-right: 21px;
   }
 }
 

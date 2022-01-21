@@ -2,6 +2,10 @@
   text-align: center;
   padding-top: 41px;
 
+  @media (min-width: @breakpoint-m) {
+    padding-top: 44px;
+  }
+
   @media (min-width: @breakpoint-l) {
     padding-top: 65px;
   }
@@ -28,17 +32,17 @@
 
     @media (min-width: @breakpoint-m) {
       height: 68px;
-      bottom: -101px;
+      bottom: -68px;
     }
 
-    @media (min-width: @breakpoint-m) {
+    @media (min-width: @breakpoint-l) {
       height: 102px;
     }
   }
 
   @media (min-width: @breakpoint-m) {
     margin-bottom: 0;
-    padding-bottom: 28px;
+    padding-bottom: 23px;
   }
 
   @media (min-width: @breakpoint-l) {
@@ -54,9 +58,9 @@
   margin-bottom: 34px;
 
   @media (min-width: @breakpoint-m) {
-    //padding: 0 125px;
     font-size: 40px;
     line-height: 54px;
+    margin-bottom: 33px;
   }
 
   @media (min-width: @breakpoint-l) {
@@ -78,7 +82,8 @@
 
   @media (min-width: @breakpoint-m) {
     grid-template-columns: 1fr 1fr;
-    row-gap: 45px;
+    row-gap: 42px;
+    column-gap: 22px;
   }
 
   @media (min-width: @breakpoint-l) {
@@ -90,6 +95,11 @@
 .contacts__item {
   &:last-child {
     margin-top: 4px;
+
+    @media (min-width: @breakpoint-m) {
+      margin-top: 0;
+    }
+
     @media (min-width: @breakpoint-m) and (max-width: (@breakpoint-l - 1)) {
       grid-column: 1/3;
       padding: 0 170px;
@@ -108,6 +118,10 @@
 
   font-size: 18px;
   line-height: 25px;
+
+  @media (min-width: @breakpoint-m) {
+    margin-bottom: 3px;
+  }
 }
 
 .contacts__item-text {
@@ -118,6 +132,10 @@
   color: @red-100;
   font-weight: 300;
   line-height: 32px;
+
+  @media (min-width: @breakpoint-m) {
+    line-height: 33px;
+  }
 
   &[href]:hover {
     text-decoration: underline;

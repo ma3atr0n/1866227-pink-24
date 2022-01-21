@@ -9,6 +9,9 @@
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/favicon-32x32.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="../fonts/opensanslight.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="../fonts/opensans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="../fonts/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -17,10 +20,12 @@
           <svg class="pink-logo pink-logo--header-mobile" width="74" height="23" aria-hidden="true" focusable="false" role="img" aria-label="Логотип Pink">
             <use class="pink-logo__pink" xlink:href="img/sprites.svg#pink-logo-pink-solo"></use>
           </svg>
-          <svg class="pink-logo pink-logo--header" width="147" height="40" aria-hidden="true" focusable="false" role="img" aria-label="Логотип Pink">
-            <use class="pink-logo__pink" xlink:href="img/sprites.svg#pink-logo-pink"></use>
-            <use class="pink-logo__glasses" xlink:href="img/sprites.svg#pink-logo-glasses"></use>
-            <use class="pink-logo__glasses pink-logo__glasses--w-hole" xlink:href="img/sprites.svg#pink-logo-glasses-w-hole"></use>
+          <svg class="pink-logo pink-logo--header-tablet" width="145" height="40" aria-hidden="true" focusable="false" role="img" aria-label="Логотип Pink">
+            <use class="pink-logo__header-tablet" xlink:href="img/sprites.svg#pink-logo-header-tablet"></use>
+          </svg>
+          <svg class="pink-logo pink-logo--header-desktop" width="147" height="40" aria-hidden="true" focusable="false" role="img" aria-label="Логотип Pink">
+            <use class="pink-logo__pink" xlink:href="img/sprites.svg#pink-logo-pink-group-l"></use>
+            <use class="pink-logo__glasses" xlink:href="img/sprites.svg#pink-logo-glasses-w-hole"></use>
             <use class="pink-logo__star" xlink:href="img/sprites.svg#pink-logo-star-group"></use>
             <use class="pink-logo__star" xlink:href="img/sprites.svg#pink-logo-star"></use>
           </svg>
@@ -108,7 +113,7 @@
                   </picture>
                 </div>
                 <h3 class="advantages__item-title">Меняет мир вокруг</h3>
-                <p class="advantages__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+                <p class="advantages__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить&nbsp;эффект</p>
               </li>
               <li class="advantages__item">
                 <div class="advantages__item-header">
@@ -139,7 +144,7 @@
               <img src="../img/main/advantages/effect-24-tablet.svg" alt="Логотип эффект 24" />
             </picture>
             <div class="advantages-effect__content">
-              <h3 class="advantages-effect__title">Эффект на 24 часа!</h3>
+              <h3 class="advantages-effect__title">Эффект на&nbsp;24 часа!</h3>
               <p class="advantages-effect__text">Британские ученые провели исследования и&nbsp;доказали, что&nbsp;положительный эффект от&nbsp;использования приложения
                 длится целые&nbsp;сутки!</p>
               <a class="advantages-effect__link" href="#">Узнать больше об исследовании</a>
@@ -197,10 +202,10 @@
         <div class="price__inner">
           <table class="table price__table">
             <tr class="table-header table__row">
-              <th class="table-header__cell table-header__cell--option">
+              <th class="table-header__cell-option">
                 <span class="visually__hidden">Опции</span>
               </th>
-              <th class="table-header__cell">
+              <th class="table-header__cell table-header__cell--first">
                 <h3 class="table-header__title">База</h3>
                 <span class="table-header__price">1,99 USD</span>
               </th>
@@ -305,11 +310,14 @@
       <div class="container page-footer__inner">
         <a class="page-footer__logo" title="Логотип Пинк" aria-label="Логотип Пинк">
           <span class="visually__hidden">Pink logo</span>
-          <svg class="pink-logo pink-logo--footer" width="147" height="40" aria-hidden="true" focusable="false" role="img" aria-label="">
-            <use class="pink-logo__pink pink-logo__pink--footer" xlink:href="img/sprites.svg#pink-logo-pink"></use>
+          <svg class="pink-logo pink-logo--footer-mobile" width="145" height="40" aria-hidden="true" focusable="false" role="img" aria-label="Логотип Pink">
+            <use class="pink-logo__pink pink-logo__pink--footer" xlink:href="img/sprites.svg#pink-logo-pink-group-s"></use>
             <use class="pink-logo__glasses pink-logo__glasses--footer" xlink:href="img/sprites.svg#pink-logo-glasses"></use>
-            <use class="pink-logo__glasses pink-logo__glasses--w-hole pink-logo__glasses--footer" xlink:href="img/sprites.svg#pink-logo-glasses-w-hole"></use>
-            <use class="pink-logo__star pink-logo__star--footer" xlink:href="img/sprites.svg#pink-logo-star-group"></use>
+          </svg>
+          <svg class="pink-logo pink-logo--footer-desktop" width="147" height="40" aria-hidden="true" focusable="false" role="img" aria-label="Логотип Pink">
+            <use class="pink-logo__pink pink-logo__pink--footer" xlink:href="img/sprites.svg#pink-logo-pink-group-l"></use>
+            <use class="pink-logo__glasses pink-logo__glasses--footer" xlink:href="img/sprites.svg#pink-logo-glasses-w-hole"></use>
+            <use class="pink-logo__star pink-logo__star--group-footer" xlink:href="img/sprites.svg#pink-logo-star-group"></use>
             <use class="pink-logo__star" xlink:href="img/sprites.svg#pink-logo-star"></use>
           </svg>
         </a>
