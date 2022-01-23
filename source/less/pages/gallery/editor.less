@@ -1,9 +1,9 @@
 .editor {
-  padding-top: 49px;
+  padding-top: 40px;
   overflow: hidden;
 
   @media (min-width: @breakpoint-m) {
-    padding-top: 73px;
+    padding-top: 64px;
   }
 
   @media (min-width: @breakpoint-l) {
@@ -18,7 +18,7 @@
 
   @media (min-width: @breakpoint-m) {
     .title-5();
-    margin-bottom: 69px;
+    margin-bottom: 70px;
   }
 
   @media (min-width: @breakpoint-l) {
@@ -33,10 +33,10 @@
 .editor__content {
   background-color: @white-200;
   padding-top: 20px;
-  padding-bottom: 38px;
+  padding-bottom: 41px;
 
   @media (min-width: @breakpoint-m) {
-    padding-top: 57px;
+    padding-top: 42px;
     padding-bottom: 54px;
   }
 
@@ -48,7 +48,7 @@
 
 .editor__form {
   display: grid;
-  row-gap: 42px;
+  row-gap: 40px;
   background-color: @white-200;
 
   @media (min-width: @breakpoint-m) {
@@ -63,11 +63,19 @@
   }
 }
 
+.editor__column {
+  @media (min-width: @breakpoint-m) {
+    &:first-child {
+      padding-top: 15px;
+    }
+  }
+}
+
 .editor__buttons {
   .reset-ul();
 
   position: relative;
-  padding-top: 38px;
+  padding-top: 39px;
   width: 100%;
   display: grid;
   row-gap: 12px;
@@ -91,8 +99,8 @@
   }
 
   @media (min-width: @breakpoint-m) {
-    padding-top: 66px;
-    padding-bottom: 0;
+    padding: 64px 13px 0 2px;
+    row-gap: 24px;
   }
 
   @media (min-width: @breakpoint-l) {
@@ -108,5 +116,6 @@
   &-upload,
   &-reset {
     width: 100%;
+    padding-left: 31px;
   }
 }

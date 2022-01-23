@@ -3,11 +3,11 @@
   padding: 40px 0 40px;
 
   @media (min-width: @breakpoint-m) {
-    padding: 36px 0 40px;
+    padding: 36px 0 37px;
   }
 
   @media (min-width: @breakpoint-l) {
-    padding: 70px 0 68px;
+    padding: 71px 0 72px;
   }
 }
 
@@ -88,6 +88,16 @@
 .social__icon {
   &--youtube {
     margin-left: 4px;
+
+    @media (min-width: @breakpoint-l) {
+      margin-left: 6px;
+    }
+  }
+
+  &--facebook {
+    @media (min-width: @breakpoint-l) {
+      margin-left: 2px;
+    }
   }
 }
 
