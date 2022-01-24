@@ -21,11 +21,28 @@
 .gallery-list__item {
   display: flex;
   flex-direction: column;
+
+  &:not(:last-child) {
+    padding-bottom: 20px;
+
+    @media (min-width: @breakpoint-m) {
+      padding-bottom: 0;
+    }
+  }
+
+  &:nth-child(4) .gallery-list__text {
+    margin-bottom: 11px;
+  }
 }
 
 .gallery-list__item--panorama {
   @media (min-width: @breakpoint-m) {
     grid-column: 1 / -1;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: @breakpoint-l) {
+    margin-bottom: -4px;
   }
 
   & .gallery-list__lead {
@@ -44,8 +61,19 @@
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, min-content);
       min-height: 96px;
-      padding-right: 29px;
-      padding-bottom: 23px;
+      padding: 23px 29px 25px 30px;
+    }
+
+    @media (min-width: @breakpoint-m) {
+      padding: 24px 30px 24px 27px;
+    }
+  }
+
+  & .gallery-list__header {
+    line-height: 24px;
+
+    @media (min-width: @breakpoint-l) {
+      line-height: 23px;
     }
   }
 
@@ -61,13 +89,14 @@
     @media (min-width: @breakpoint-m) {
       justify-self: end;
       flex-direction: row-reverse;
+      margin-right: 1px;
     }
   }
 
   & .like__count {
     @media (min-width: @breakpoint-m) {
       margin: 0;
-      margin-right: 17px;
+      margin-right: 16px;
     }
   }
 }
@@ -81,17 +110,26 @@
   flex-direction: column;
   background-color: @white-200;
   color: @gray-100;
-  padding: 18px 18px 20px;
+  padding: 18px 0 19px 17px;
   min-height: 121px;
 
+  &--panorama {
+    padding-bottom: 19px;
+  }
+
   @media (min-width: @breakpoint-m) {
-    padding: 24px 31px 22px 28px;
+    padding: 23px 30px 24px 30px;
     min-height: 155px;
+  }
+
+  @media (min-width: @breakpoint-l) {
+    padding: 24px 31px 23px 27px;
   }
 }
 
 .gallery-list__header {
   .reset-indent();
+  line-height: 23px;
 }
 
 .gallery-list__author {

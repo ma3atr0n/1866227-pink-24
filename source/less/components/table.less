@@ -1,4 +1,4 @@
-.table-header__cell--option,
+.table-header__cell-option,
 .table__cell--title {
   display: none;
 
@@ -12,24 +12,45 @@
   }
 }
 
+.table-header {
+  transform: translateY(2px);
+  /*@media (min-width: @breakpoint-m) {
+
+  }*/
+}
+
 .table-header__cell {
   background-color: @gray-100;
   color: @white-100;
   text-transform: uppercase;
-  padding: 14px 20px 20px;
+  padding: 12px 20px 30px;
 
-  &--option {
+  &-option {
     background-color: transparent;
   }
 
   @media (min-width: @breakpoint-m) {
-    padding-top: 10px;
-    padding-bottom: 9px;
+    padding-top: 12px;
+    padding-bottom: 11px;
     width: 25%;
   }
 
   @media (min-width: @breakpoint-l) {
     padding: 17px 20px 20px;
+  }
+
+  & + .table-header__cell {
+    border-left: 2px solid @white-200;
+    border-right: 2px solid @white-200;
+  }
+
+  &--first {
+    border-top-left-radius: 3px;
+  }
+
+  &:last-of-type {
+    border: 0;
+    border-top-right-radius: 3px;
   }
 }
 
@@ -45,37 +66,42 @@
 .table-header__price {
   .title-5();
 
+  line-height: 24px;
+
   font-weight: 300;
 
   @media (min-width: @breakpoint-l) {
     font-size: 24px;
+    line-height: 30px;
   }
 }
 
 .table__cell {
   position: relative;
   align-items: center;
-  padding: 17px 68px 18px 22px;
+  padding: 14px 68px 15px 20px;
   background-color: @white-100;
   border: 2px solid @white-300;
-  border-top-width: 0;
 
   @media (min-width: @breakpoint-m) {
     padding: 7px 16px 8px;
   }
 
   @media (min-width: @breakpoint-l) {
-    padding: 16px 22px 13px;
+    padding: 14px 22px 15px;
   }
 
   &--title {
     @media (min-width: @breakpoint-m) {
       font-size: 14px;
       line-height: 30px;
+      padding: 8px 17px 7px 15px;
     }
 
     @media (min-width: @breakpoint-l) {
       .title-5();
+
+      padding: 7px 17px 8px 21px;
     }
   }
 }
@@ -94,19 +120,18 @@
   display: block;
   width: 31px;
   height: 30px;
-  top: 13px;
+  top: 14px;
   right: 17px;
   font-size: 0;
 
   &--on {
     background: url("../img/main/on.svg") no-repeat center;
-    //background: url("../img/svg/sprites.svg#table-yes") no-repeat center;
     background-size: 31px 21px;
   }
 
   &--off {
     background: url("../img/main/off.svg") no-repeat center;
-    background-size: 31px 21px;
+    background-size: 27px 27px;
   }
 
   @media (min-width: @breakpoint-m) {

@@ -3,7 +3,15 @@
   align-items: center;
   position: relative;
   min-height: 39px;
-  padding-left: 57px;
+  padding-left: 59px;
+
+  &--radio {
+    padding-left: 70px;
+
+    @media (min-width: @breakpoint-m) {
+      padding-left: 61px;
+    }
+  }
 }
 
 .contest-form-control__mark {
@@ -27,6 +35,17 @@
     background-position: center;
     width: 35px;
     height: 35px;
+    top: -1px;
+  }
+
+  &--radio {
+    width: 41px;
+    height: 41px;
+
+    &::before {
+      top: 1px;
+      left: 1px;
+    }
   }
 }
 
@@ -53,4 +72,9 @@
 
   color: @gray-100;
   text-transform: none;
+  line-height: 29px;
+
+  &--radio {
+    line-height: 28px;
+  }
 }

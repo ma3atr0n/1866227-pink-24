@@ -13,10 +13,14 @@
   @media (min-width: @breakpoint-l) {
     .container();
 
-    padding: 24px 0;
-    align-items: center;
+    padding: 27px 0 29px;
+    align-items: flex-start;
     flex-wrap: wrap;
   }
+}
+
+.main-nav__logo {
+  cursor: pointer;
 }
 
 .main-nav__toggle {
@@ -146,9 +150,14 @@
   box-shadow: 0 -1px 0 @black-100, inset 0 1px 0 rgba(255, 255, 255, 0.15);
 
   @media (min-width: @breakpoint-l) {
-    padding: 16px 0;
+    .conditions(@red-100; @white-100; 30%);
+
+    padding: 18px 0;
     background-color: transparent;
     box-shadow: none;
-    .conditions(@red-100; @white-100; 30%);
+    text-transform: none;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 400;
   }
 }

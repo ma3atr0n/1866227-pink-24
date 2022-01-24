@@ -1,15 +1,15 @@
 .intro-app {
-  padding: 28px 0 38px;
+  padding: 28px 0 31px;
 
   @media (min-width: @breakpoint-m) {
     position: relative;
-    padding: 93px 0;
+    padding: 94px 0 114px;
     width: 300px;
     z-index: 2;
   }
 
   @media (min-width: @breakpoint-l) {
-    padding: 122px 0 109px;
+    padding: 99px 0 125px;
   }
 }
 
@@ -18,7 +18,7 @@
   .title-7();
 
   position: absolute;
-  top: 29px;
+  top: 23px;
   left: 0;
   right: 0;
   padding: 0 20px;
@@ -29,14 +29,14 @@
 
     position: static;
     padding: 0 55px;
-    margin-bottom: 28px;
+    margin-bottom: 30px;
   }
 
   @media (min-width: @breakpoint-l) {
     padding: 0 30px;
-    margin-bottom: 51px;
+    margin-bottom: 36px;
     font-size: 50px;
-    line-height: 60px;
+    line-height: 68px;
   }
 }
 
@@ -44,13 +44,16 @@
   width: 100%;
   border: 3px solid @white-100;
   margin-bottom: 32px;
+  padding-right: 31px;
 
   @media (min-width: @breakpoint-m) {
     margin-bottom: 46px;
   }
 
-  @media (min-width: @breakpoint-m) {
+  @media (min-width: @breakpoint-l) {
     margin-bottom: 67px;
+    line-height: 18px;
+    padding: 16px 21px 16px 19px;
   }
 }
 
@@ -61,18 +64,18 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   flex-wrap: wrap;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 28px;
+  margin: 0 auto 21px;
 
   @media (min-width: @breakpoint-m) {
-    margin-bottom: 38px;
+    margin: 0 auto 32px 46px;
   }
 
   @media (min-width: @breakpoint-l) {
-    margin-bottom: 55px;
+    margin: 0 auto 52px 47px;
+    align-items: flex-end;
+    max-width: 205px;
   }
 }
 

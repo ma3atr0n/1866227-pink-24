@@ -6,28 +6,33 @@
   align-items: flex-start;
 
   @media (min-width: @breakpoint-l) {
-    column-gap: 67px;
+    column-gap: 71px;
     grid-template-columns: 298px auto;
+    padding-left: 131px;
   }
 }
 
 .advantages-effect__content {
   padding-top: 40px;
 
+  @media (min-width: @breakpoint-m) {
+    padding-top: 42px;
+  }
+
   @media (min-width: @breakpoint-l) {
-    padding: 91px 40px 0 0;
+    padding: 95px 40px 0 0;
   }
 }
 
 .advantages-effect__title {
   .reset-indent();
   font-size: 30px;
-  line-height: 36px;
+  line-height: 30px;
   padding-right: 135px;
-  margin-bottom: 9px;
+  margin-bottom: 10px;
 
   @media (min-width: @breakpoint-l) {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
 }
 

@@ -2,12 +2,13 @@
 .contest-form {
   @media (min-width: @breakpoint-m) {
     display: grid;
-    row-gap: 65px;
+    row-gap: 52px;
   }
 
   @media (min-width: @breakpoint-l) {
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 74px;
+    column-gap: 70px;
+    row-gap: 51px;
   }
 }
 
@@ -19,8 +20,8 @@
   align-items: flex-start;
   position: relative;
   border: 0;
-  padding-top: 42px;
-  padding-bottom: 44px;
+  padding-top: 39px;
+  padding-bottom: 42px;
 
   &--about {
     padding-top: 0;
@@ -42,6 +43,8 @@
   }
 
   &--contacts {
+    padding-top: 32px;
+
     @media (min-width: @breakpoint-m) {
       padding: 0;
       order: -1;
@@ -60,7 +63,8 @@
   }
 
   &--comment {
-    padding-bottom: 50px;
+    padding-top: 38px;
+    padding-bottom: 48px;
 
     @media (min-width: @breakpoint-m) {
       padding: 0;
@@ -94,39 +98,56 @@
   color: @red-100;
   line-height: 18px;
   float: left;
-  margin-bottom: 40px;
+  margin-bottom: 38px;
+
+  @media (min-width: @breakpoint-m) {
+    line-height: 30px;
+    float: none;
+    margin-bottom: 0;
+    transform: translateY(1px);
+  }
 
   &--contacts {
     display: none;
 
     @media (min-width: @breakpoint-m) {
       display: block;
+      padding: 0 32px 0 31px;
     }
   }
 
   &--achievements {
     padding-left: 30px;
     padding-right: 30px;
+
+    @media (min-width: @breakpoint-m) {
+      padding: 0 32px;
+    }
   }
 
   &--travel {
+    margin-bottom: 34px;
     padding-left: 49px;
     padding-right: 49px;
+
+    @media (min-width: @breakpoint-m) {
+      margin-bottom: 0;
+      padding: 0 25px;
+    }
+
+    @media (min-width: @breakpoint-l) {
+      margin-bottom: 0;
+      padding: 0 25px;
+    }
   }
 
   &--comment {
-    margin-bottom: 22px;
-  }
+    margin-bottom: 16px;
 
-  @media (max-width: (@breakpoint-m - 1)) {
-    float: left;
-    margin-bottom: 40px;
-  }
-
-  @media (min-width: @breakpoint-m) {
-    line-height: 30px;
-    float: none;
-    margin-bottom: 0;
+    @media (min-width: @breakpoint-m) {
+      margin-bottom: 0;
+      padding: 0 38px;
+    }
   }
 }
 
@@ -136,30 +157,31 @@
   display: grid;
 
   &--about {
-    row-gap: 29px;
+    row-gap: 17px;
 
     @media (min-width: @breakpoint-m) {
-      row-gap: 56px;
+      row-gap: 52px;
     }
 
     @media (min-width: @breakpoint-l) {
-      padding-top: 28px;
+      padding-top: 20px;
+      row-gap: 54px;
     }
   }
 
   &--contacts {
-    row-gap: 16px;
+    row-gap: 17px;
 
     @media (min-width: @breakpoint-m) {
-      padding: 46px 60px 37px;
-      row-gap: 28px;
+      padding: 30px 58px 22px;
+      row-gap: 24px;
     }
 
     @media (min-width: @breakpoint-l) {
-      padding-top: 44px;
-      padding-bottom: 23px;
+      padding-top: 28px;
+      padding-bottom: 8px;
       grid-template-columns: repeat(2, 1fr);
-      column-gap: 74px;
+      column-gap: 70px;
     }
   }
 
@@ -167,11 +189,12 @@
     row-gap: 43px;
 
     @media (min-width: @breakpoint-m) {
-      padding: 54px 60px 50px;
+      padding: 38px 58px 48px;
     }
 
     @media (min-width: @breakpoint-l) {
-      grid-template-columns: 280px 260px auto;
+      grid-template-columns: 315px 295px auto;
+      padding-bottom: 55px;
     }
   }
 
@@ -179,7 +202,12 @@
     row-gap: 36px;
 
     @media (min-width: @breakpoint-m) {
-      padding: 54px 60px;
+      padding: 38px 58px 54px;
+    }
+
+    @media (min-width: @breakpoint-l) {
+      row-gap: 37px;
+      padding: 38px 72px 54px;
     }
   }
 }
@@ -190,12 +218,26 @@
       display: flex;
       align-items: center;
     }
+
+    @media (min-width: @breakpoint-l) {
+      &:last-child {
+        margin-top: -2px;
+      }
+    }
   }
 
   &--contacts {
     @media (min-width: @breakpoint-m) {
       display: flex;
       flex-direction: column-reverse;
+    }
+  }
+
+  &--achievements {
+    @media (min-width: @breakpoint-l) {
+      &:nth-child(odd) {
+        order: -1;
+      }
     }
   }
 }
@@ -207,28 +249,41 @@
   cursor: pointer;
   display: block;
 
+
   &--text {
     @media (max-width: (@breakpoint-m - 1)) {
+      margin-bottom: 5px;
       padding-left: 23px;
+
+      &.contest-form__label--contacts {
+        padding-left: 24px;
+      }
     }
   }
 
   &--about {
     @media (min-width: @breakpoint-m) {
-      margin-right: 20px;
+      margin-right: 19px;
+      margin-top: 2px;
     }
   }
 
   &--contacts {
+    margin-bottom: 5px;
+
     @media (min-width: @breakpoint-m) {
-      margin-left: 20px;
+      margin-left: 19px;
       margin-top: 10px;
     }
   }
 
   &--textarea {
     @media (min-width: @breakpoint-m) {
-      padding: 47px 60px 53px;
+      padding: 31px 58px 51px;
+    }
+
+    @media (min-width: @breakpoint-l) {
+      padding: 28px 58px 43px;
     }
   }
 }
@@ -248,15 +303,19 @@
   transition: transform 0.25s ease;
 
   &--textarea {
+    padding-top: 13px;
     resize: none;
-    min-height: 197px;
+    min-height: 201px;
+    border-radius: 3px;
 
     @media (min-width: @breakpoint-m) {
-      min-height: 189px;
+      min-height: 193px;
+      padding: 14px 20px 15px;
     }
 
     @media (min-width: @breakpoint-l) {
-      min-height: 124px;
+      padding: 13px 20px 16px;
+      min-height: 128px;
     }
   }
 }
@@ -266,23 +325,22 @@
 }
 
 .contest-form__contacts-icon {
-  display: none;
-  flex-shrink: 0;
-  width: 61px;
-  min-height: 100%;
-  border: 0;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-  background: @white-300 url("../img/main/form/bg-phone-icon.svg") no-repeat center;
-  background-size: 20px 19px;
-
-  &--email {
-    background-image: url("../img/main/form/bg-email-icon.svg");
-    background-size: 18px 13px;
-  }
-
   @media (min-width: @breakpoint-m) {
     display: block;
+    flex-shrink: 0;
+    width: 59px;
+    min-height: 100%;
+    border: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background: @white-300 url("../img/main/form/bg-phone-icon.svg") no-repeat 18px center;
+    background-size: 20px 19px;
+
+    &--email {
+      background-image: url("../img/main/form/bg-email-icon.svg");
+      background-position: 19px center;
+      background-size: 18px 13px;
+    }
   }
 }
 
@@ -290,9 +348,11 @@
   //min-width: 100%;
   text-align: center;
   display: grid;
-  row-gap: 52px;
+  row-gap: 34px;
+  padding-bottom: 16px;
 
   @media (min-width: @breakpoint-m) {
+    padding: 14px 0 48px;
     grid-template-columns: 300px max-content;
     justify-content: space-between;
     align-items: center;
@@ -300,12 +360,21 @@
 
   @media (min-width: @breakpoint-l) {
     grid-column: 1 / -1;
+    padding-bottom: 0;
   }
+}
+
+.contest-form__submit {
+  padding: 14px 31px 15px 30px;
 }
 
 .contest-form__annotation {
   .reset-indent();
   text-transform: uppercase;
+
+  &-star {
+    color: @red-100;
+  }
 
   &-longtext {
     display: none;

@@ -3,11 +3,11 @@
   padding: 40px 0 40px;
 
   @media (min-width: @breakpoint-m) {
-    padding: 39px 0 40px;
+    padding: 36px 0 37px;
   }
 
   @media (min-width: @breakpoint-l) {
-    padding: 70px 0 68px;
+    padding: 71px 0 72px;
   }
 }
 
@@ -20,29 +20,46 @@
     flex-direction: row;
     justify-content: space-between;
   }
+
+  @media (min-width: @breakpoint-l) {
+    align-items: flex-start;
+  }
 }
 
 .page-footer__logo {
   display: block;
-  margin-bottom: 41px;
+  margin-bottom: 38px;
+  cursor: pointer;
 
   @media (min-width: @breakpoint-m) {
     margin-bottom: 0;
+    align-self: flex-start;
+  }
+
+  @media (min-width: @breakpoint-l) {
+    margin-top: -1px;
   }
 }
 
 .social {
   .reset-ul();
 
-  width: 182px;
+  width: 178px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 41px;
+  margin-bottom: 38px;
 
   @media (min-width: @breakpoint-m) {
     margin-bottom: 0;
+    margin-right: 15px;
+  }
+
+  @media (min-width: @breakpoint-l) {
+    margin-right: 0;
+    margin-left: 5px;
+    max-width: 172px;
   }
 }
 
@@ -50,8 +67,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 48px;
-  height: 48px;
+  width: 54px;
+  height: 54px;
   border: 3px solid fade(@gray-100, 10%);
   border-radius: 50%;
 
@@ -60,7 +77,27 @@
   }
 
   &:active {
+    border-color: fade(@gray-100, 10%);
+  }
+
+  &:active svg {
     opacity: 0.3;
+  }
+}
+
+.social__icon {
+  &--youtube {
+    margin-left: 4px;
+
+    @media (min-width: @breakpoint-l) {
+      margin-left: 6px;
+    }
+  }
+
+  &--facebook {
+    @media (min-width: @breakpoint-l) {
+      margin-left: 2px;
+    }
   }
 }
 
@@ -72,10 +109,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (min-width: @breakpoint-m) {
+    margin-top: 1px;
+  }
+
+  @media (min-width: @breakpoint-l) {
+    margin-top: 6px;
+  }
 }
 
 .page-footer__production-text {
-  line-height: 18px;
+  line-height: 19px;
   color: @gray-100;
   margin-right: 15px;
+
+  @media (min-width: @breakpoint-l) {
+    font-size: 18px;
+    line-height: 18px;
+    margin-right: 13px;
+  }
 }
+
+.page-footer__production-icon {
+  @media (min-width: @breakpoint-l) {
+    margin-top: 4px;
+  }
+}
+

@@ -29,10 +29,15 @@
 .like__count {
   .reset-indent();
 
-  margin-left: 19px;
+  margin-left: 18px;
   font-size: 12px;
   color: @red-100;
   text-transform: uppercase;
+  transform: translateY(1px);
+
+  &--panorama {
+    margin-left: 18.5px;
+  }
 
   @media (min-width: @breakpoint-m) {
     margin: 0;

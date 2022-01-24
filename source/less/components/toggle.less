@@ -9,8 +9,8 @@
 
   position: absolute;
   font-size: 0;
-  top: -6px;
-  right: 50px;
+  top: -5px;
+  right: 33px;
   width: 14px;
   height: 14px;
   border-radius: 50%;
@@ -19,5 +19,35 @@
 
   &:active {
     background-color: @red-100;
+  }
+
+  @media (min-width: @breakpoint-m) {
+    &--crop {
+      right: 28px;
+    }
+
+    &--fill {
+      right: 163px;
+    }
+
+    &--contrast {
+      right: 92px;
+    }
+  }
+
+  @media (min-width: @breakpoint-l) {
+    top: -6px;
+
+    &--crop {
+      right: 40px;
+    }
+
+    &--fill {
+      right: 238px;
+    }
+
+    &--contrast {
+      right: 137px;
+    }
   }
 }

@@ -1,3 +1,28 @@
 .app-list__icon {
   display: flex;
+
+  &--android {
+    margin-top: 2px;
+
+    @media (min-width: @breakpoint-m) {
+      margin: 0;
+    }
+
+    @media (min-width: @breakpoint-l) {
+      margin-bottom: 1px;
+      margin-right: 3px;
+    }
+  }
+
+  &--microsoft {
+    margin-top: 8px;
+
+    @media (min-width: @breakpoint-m) {
+      margin: 0;
+    }
+
+    @media (min-width: @breakpoint-l) {
+      margin-bottom: 3px;
+    }
+  }
 }
