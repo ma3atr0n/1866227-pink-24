@@ -42,7 +42,7 @@
   }
 
   @media (min-width: @breakpoint-l) {
-    margin-bottom: 0;
+    margin-bottom: -4px;
   }
 
   & .gallery-list__lead {
@@ -63,10 +63,18 @@
       min-height: 96px;
       padding: 23px 29px 25px 30px;
     }
+
+    @media (min-width: @breakpoint-m) {
+      padding: 24px 30px 24px 27px;
+    }
   }
 
   & .gallery-list__header {
     line-height: 24px;
+
+    @media (min-width: @breakpoint-l) {
+      line-height: 23px;
+    }
   }
 
   & .gallery-list__text {
@@ -112,6 +120,10 @@
   @media (min-width: @breakpoint-m) {
     padding: 23px 30px 24px 30px;
     min-height: 155px;
+  }
+
+  @media (min-width: @breakpoint-l) {
+    padding: 24px 31px 23px 27px;
   }
 }
 
