@@ -13,7 +13,7 @@
   @media (min-width: @breakpoint-l) {
     .container();
 
-    padding: 27px 0 29px;
+    padding: 27px 0 34px;
     align-items: flex-start;
     flex-wrap: wrap;
   }
@@ -152,12 +152,16 @@
   @media (min-width: @breakpoint-l) {
     .conditions(@red-100; @white-100; 30%);
 
-    padding: 18px 0;
+    padding: 18px 0 11px;
     background-color: transparent;
     box-shadow: none;
     text-transform: none;
     font-size: 18px;
     line-height: 18px;
     font-weight: 400;
+
+    &--active {
+      border-bottom: 2px solid @white-100;
+    }
   }
 }

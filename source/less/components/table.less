@@ -7,7 +7,7 @@
     line-height: 30px;
   }
 
-  @media (min-width: @breakpoint-m) {
+  @media (min-width: @breakpoint-l) {
     .title-5();
   }
 }
@@ -27,6 +27,57 @@
 
   &-option {
     background-color: transparent;
+  }
+
+  &--hit {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      display: block;
+      content: '';
+      color: @white-100;
+      width: 74px;
+      height: 74px;
+      clip-path: polygon(56% 0, 100.5% 0, 0 100.5%, 0 56%);
+      background-color: @red-100;
+      top: 0;
+      left: -2px;
+
+      @media (min-width: @breakpoint-m) {
+        clip-path: polygon(43% 0, 79.5% 0, 0 79.5%, 0 43%);
+        left: 0;
+      }
+
+      @media (min-width: @breakpoint-l) {
+        clip-path: polygon(55.5% 0, 100% 0, 0 100%, 0 55.5%);
+      }
+    }
+
+    &::after {
+      position: absolute;
+      display: block;
+      content: 'хит';
+      transform: rotate(-45deg);
+      color: @white-100;
+      font-size: 14px;
+      line-height: 30px;
+      font-weight: 400;
+      width: 27px;
+      height: 10px;
+      top: 18px;
+      left: 6px;
+
+      @media (min-width: @breakpoint-m) {
+        top: 13px;
+        left: -1px;
+      }
+
+      @media (min-width: @breakpoint-m) {
+        top: 18px;
+        left: 7px;
+      }
+    }
   }
 
   @media (min-width: @breakpoint-m) {
