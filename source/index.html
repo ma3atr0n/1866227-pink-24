@@ -36,7 +36,7 @@
         </button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--active">Главная</a>
+            <a class="main-nav__link">Главная</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="gallery.html">Фотографии</a>
@@ -156,15 +156,31 @@
         <h2 class="visually__hidden">Отзывы о приложении</h2>
         <div class="reviews__inner container">
           <div class="reviews__slider">
-            <ul class="reviews__list">
-              <li class="reviews__item">
-                <div class="reviews__header">
-                  <h3 class="reviews__autor">Николай Петров</h3>
-                  <p class="reviews__abount">25 лет, водитель трамвая</p>
-                </div>
-                <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-              </li>
-            </ul>
+            <div class="reviews__slider-overflow">
+              <ul class="reviews__list">
+                <li class="reviews__item">
+                  <div class="reviews__header">
+                    <h3 class="reviews__autor">Николай Петров</h3>
+                    <p class="reviews__abount">25 лет, водитель трамвая</p>
+                  </div>
+                  <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                </li>
+                <li class="reviews__item">
+                  <div class="reviews__header">
+                    <h3 class="reviews__autor">Николай Петров</h3>
+                    <p class="reviews__abount">25 лет, водитель трамвая</p>
+                  </div>
+                  <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                </li>
+                <li class="reviews__item">
+                  <div class="reviews__header">
+                    <h3 class="reviews__autor">Николай Петров</h3>
+                    <p class="reviews__abount">25 лет, водитель трамвая</p>
+                  </div>
+                  <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                </li>
+              </ul>
+            </div>
             <ol class="dots reviews__dots">
               <li class="dots__item">
                 <button class="dots__button dots__button--active">
@@ -209,7 +225,7 @@
                 <h3 class="table-header__title">База</h3>
                 <span class="table-header__price">1,99 USD</span>
               </th>
-              <th class="table-header__cell">
+              <th class="table-header__cell table-header__cell--hit">
                 <h3 class="table-header__title">Стандарт</h3>
                 <span class="table-header__price">3,99 USD</span>
               </th>

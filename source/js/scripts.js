@@ -38,6 +38,89 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
+  //Form Valid
+  if (document.querySelector('.contest-form')) {
+
+    const overlay = document.querySelector('.overlay');
+    const modals = document.querySelectorAll('.modal');
+    const modalButtonSuccess = document.querySelector('.modal__button--success');
+    const modalButtonError = document.querySelector('.modal__button--error');
+    const inputs = document.querySelectorAll('input[id="surname"],input[id="name"],input[id="email"]');
+    const form = document.querySelector('.contest-form');
+
+    form.addEventListener("submit", function (e) {
+      let valid = true;
+      e.preventDefault()
+      console.log(modals)
+      inputs.forEach(element => {
+        console.log(element.value)
+        if (element.value === '') {
+          valid = false
+        }
+      })
+      overlay.classList.toggle('overlay--active')
+      if (valid) {
+        modals[0].classList.toggle('modal-success--active')
+      } else {
+        modals[1].classList.toggle('modal-error--active')
+      }
+    })
+
+    modalButtonSuccess.addEventListener('click', function(e) {
+      modals[0].classList.toggle('modal-success--active')
+      overlay.classList.toggle('overlay--active')
+    })
+    modalButtonError.addEventListener('click', function(e) {
+      modals[1].classList.toggle('modal-error--active')
+      overlay.classList.toggle('overlay--active')
+    })
+  }
+
+  //Like
+  if (document.querySelector('.gallery')) {
+    let heart = document.querySelectorAll('.like__button');
+    let likesNumber = document.querySelectorAll('.like__value');
+
+    heart.forEach((element,index) => {
+      element.onclick = function () {
+        if (element.classList.contains('added')) {
+          likesNumber[index].textContent--;
+        } else {
+          likesNumber[index].textContent++;
+        }
+
+        element.classList.toggle('added');
+      };
+    })
+  }
+
+  //Review Slider
+  if (document.querySelector('.reviews')) {
+
+    let offset = 0;
+    let buttonNext = document.querySelector('.reviews__nav__button--next');
+    let buttonPrev = document.querySelector('.reviews__nav__button--prev');
+    let sliderLine = document.querySelector('.reviews__list');
+    let sliderItems = document.querySelectorAll('.reviews__item');
+
+    sliderLine.style.width = (100 * sliderItems.length) + '%';
+
+    buttonNext.addEventListener('click', function(){
+      offset += 100;
+      if (offset > 100 * (sliderItems.length - 1)) {
+        offset = 0;
+      }
+      sliderLine.style.left = -offset + '%';
+    })
+
+    buttonPrev.addEventListener('click', function(){
+      offset -= 100;
+      if (offset < 0) {
+        offset = 100 * (sliderItems.length - 1);
+      }
+      sliderLine.style.left = -offset + '%';
+    })
+  }
 })
 
 
