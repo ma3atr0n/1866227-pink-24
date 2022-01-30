@@ -1,0 +1,123 @@
+.table-header {
+  transform: translateY(2px);
+}
+
+.table-header__cell {
+  background-color: @gray-100;
+  color: @white-100;
+  text-transform: uppercase;
+  padding: 12px 20px 30px;
+
+  &-option {
+    background-color: transparent;
+    display: none;
+
+    @media (min-width: @breakpoint-m) {
+      display: table-cell;
+      line-height: 30px;
+    }
+
+    @media (min-width: @breakpoint-l) {
+      .title-5();
+    }
+  }
+
+  &--hit {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      display: block;
+      content: '';
+      color: @white-100;
+      width: 74px;
+      height: 74px;
+      clip-path: polygon(56% 0, 100.5% 0, 0 100.5%, 0 56%);
+      background-color: @red-100;
+      top: 0;
+      left: -2px;
+
+      @media (min-width: @breakpoint-m) {
+        clip-path: polygon(43% 0, 79.5% 0, 0 79.5%, 0 43%);
+        left: 0;
+      }
+
+      @media (min-width: @breakpoint-l) {
+        clip-path: polygon(55.5% 0, 100% 0, 0 100%, 0 55.5%);
+      }
+    }
+
+    &::after {
+      position: absolute;
+      display: block;
+      content: "хит";
+      transform: rotate(-45deg);
+      color: @white-100;
+      font-size: 14px;
+      line-height: 30px;
+      font-weight: 400;
+      width: 27px;
+      height: 10px;
+      top: 18px;
+      left: 6px;
+
+      @media (min-width: @breakpoint-m) {
+        top: 13px;
+        left: -1px;
+      }
+
+      @media (min-width: @breakpoint-l) {
+        top: 18px;
+        left: 7px;
+      }
+    }
+  }
+
+  @media (min-width: @breakpoint-m) {
+    padding-top: 12px;
+    padding-bottom: 11px;
+    width: 25%;
+  }
+
+  @media (min-width: @breakpoint-l) {
+    padding: 17px 20px 20px;
+  }
+
+  & + .table-header__cell {
+    border-left: 2px solid @white-200;
+    border-right: 2px solid @white-200;
+  }
+
+  &--first {
+    border-top-left-radius: 3px;
+  }
+
+  &:last-of-type {
+    border: 0;
+    border-top-right-radius: 3px;
+  }
+}
+
+.table-header__title {
+  .reset-indent();
+  .title-2();
+
+  display: block;
+
+  @media (min-width: @breakpoint-l) {
+    .title-5();
+  }
+}
+
+.table-header__price {
+  .title-5();
+
+  line-height: 24px;
+
+  font-weight: 300;
+
+  @media (min-width: @breakpoint-l) {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
