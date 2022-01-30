@@ -11,3 +11,30 @@
     background-color: @gray-100;
   }
 }
+
+.page-header--no-js {
+  @media (max-width: @breakpoint-l - 1) {
+    position: relative;
+    background-color: @gray-100;
+
+    & .main-nav {
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+
+      &__toggle {
+        display: none;
+      }
+
+      &__logo {
+        padding: 10px 0;
+      }
+
+      &__list {
+        display: block;
+        position: relative;
+        top: 0;
+      }
+    }
+  }
+}

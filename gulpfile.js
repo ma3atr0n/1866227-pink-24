@@ -12,6 +12,7 @@ import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 import del from 'del';
 import browser from 'browser-sync';
+import path from 'path'
 
 // Styles
 
@@ -47,12 +48,34 @@ const scripts = () => {
 }
 
 // Images
-
 const optimizeImages = () => {
-  return gulp.src('source/img/**/*.{png,jpg}')
-    .pipe(squoosh())
-    .pipe(gulp.dest('build/img'))
-}
+  return gulp
+    .src("source/img/**/*.{png,jpg}")
+    .pipe(
+      squoosh((src) => {
+        const extname = path.extname(src.path);
+        let options = {
+          encodeOptions: squoosh.DefaultEncodeOptions[extname],
+        };
+        if (extname === ".png") {
+          options = {
+            encodeOptions: {
+              oxipng: {},
+            },
+            preprocessOptions: {
+              quant: {
+                enabled: true,
+                numColors: 255,
+              },
+            },
+          };
+        }
+
+        return options;
+      })
+    )
+    .pipe(gulp.dest("build/img"));
+};
 
 const copyImages = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
@@ -149,7 +172,7 @@ export const build = gulp.series(
     svg,
     sprite,
     createWebp
-  ),
+  )
 );
 
 // Default

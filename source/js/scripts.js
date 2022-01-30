@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileToggle = document.querySelector('.main-nav__toggle');
     const mobileMenu = document.querySelector('.main-nav__list');
     const pageHeader = document.querySelector('.page-header');
+    pageHeader.classList.remove('page-header--no-js');
 
-
-    mobileToggle.addEventListener("click", function (e) {
+    mobileToggle.addEventListener("click", function () {
       mobileToggle.classList.toggle('main-nav__toggle--open');
       mobileToggle.classList.toggle('main-nav__toggle--closed');
       mobileMenu.classList.toggle('main-nav__list--open');
@@ -22,19 +22,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const center = [59.93879, 30.323118];
 
     function init(){
-        let map = new ymaps.Map("map", {
-            center: center,
-            zoom: 17,
-            controls: ['zoomControl']
-        });
+      let map = new ymaps.Map("map", {
+          center: center,
+          zoom: 17,
+          controls: ['zoomControl']
+      });
 
-        let placemark = new ymaps.Placemark([59.938615, 30.323040], {}, {
-          iconLayout: 'default#image',
-          iconImageHref: 'img/main/map-marker.png',
-          iconImageSize: [36, 36]
-        });
+      let placemark = new ymaps.Placemark([59.938615, 30.323040], {}, {
+        iconLayout: 'default#image',
+        iconImageHref: 'img/main/map-marker.png',
+        iconImageSize: [36, 36]
+      });
 
-        map.geoObjects.add(placemark);
+      map.geoObjects.add(placemark);
     }
   }
 
@@ -45,33 +45,31 @@ document.addEventListener('DOMContentLoaded', function() {
     const modals = document.querySelectorAll('.modal');
     const modalButtonSuccess = document.querySelector('.modal__button--success');
     const modalButtonError = document.querySelector('.modal__button--error');
-    const inputs = document.querySelectorAll('input[id="surname"],input[id="name"],input[id="email"]');
+    const inputs = document.querySelectorAll("input[id='surname'],input[id='name'],input[id='email']");
     const form = document.querySelector('.contest-form');
 
     form.addEventListener("submit", function (e) {
       let valid = true;
       e.preventDefault()
-      console.log(modals)
       inputs.forEach(element => {
-        console.log(element.value)
         if (element.value === '') {
           valid = false
         }
       })
       overlay.classList.toggle('overlay--active')
       if (valid) {
-        modals[0].classList.toggle('modal-success--active')
+        modals[0].classList.toggle('modal--active')
       } else {
-        modals[1].classList.toggle('modal-error--active')
+        modals[1].classList.toggle('modal--active')
       }
     })
 
     modalButtonSuccess.addEventListener('click', function(e) {
-      modals[0].classList.toggle('modal-success--active')
+      modals[0].classList.toggle('modal--active')
       overlay.classList.toggle('overlay--active')
     })
     modalButtonError.addEventListener('click', function(e) {
-      modals[1].classList.toggle('modal-error--active')
+      modals[1].classList.toggle('modal--active')
       overlay.classList.toggle('overlay--active')
     })
   }
@@ -122,6 +120,4 @@ document.addEventListener('DOMContentLoaded', function() {
     })
   }
 })
-
-
 

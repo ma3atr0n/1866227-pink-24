@@ -14,9 +14,10 @@
     <link rel="preload" href="fonts/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   </head>
   <body class="page__body">
-    <header class="page-header">
+    <!-- Добавть page-header класс page-header--no-js для работы без JS -->
+    <header class="page-header page-header--no-js">
       <nav class="main-nav main-nav--closed">
-        <a class="main-nav__logo" href="index.html" title="Логотип Пинк" aria-label="Логотип Пинк">
+        <a class="main-nav__logo" href="index.html" title="Логотип Пинк" aria-label="Логотип Пинк" role="link">
           <svg class="pink-logo pink-logo--header-mobile" width="74" height="23" aria-hidden="true" focusable="false" role="img" aria-label="Логотип Pink">
             <use class="pink-logo__pink" xlink:href="img/sprites.svg#pink-logo-pink-solo"></use>
           </svg>
@@ -64,11 +65,11 @@
             <li class="gallery-list__item gallery-list__item--panorama">
               <div class="gallery-list__lead">
                 <picture>
-                  <source srcset="img/main/gallery/panorama-1200.webp, img/main/gallery/panorama-1200@2x.webp 2x"
+                  <source type="image/webp" srcset="img/main/gallery/panorama-1200.webp, img/main/gallery/panorama-1200@2x.webp 2x"
                           media="(min-width: 1200px)">
-                  <source srcset="img/main/gallery/panorama-660.webp, img/main/gallery/panorama-660@2x.webp 2x"
+                  <source type="image/webp" srcset="img/main/gallery/panorama-660.webp, img/main/gallery/panorama-660@2x.webp 2x"
                           media="(min-width: 660px)">
-                          <source srcset="img/main/gallery/panorama-320.webp, img/main/gallery/panorama-320@2x.webp 2x">
+                  <source type="image/webp" srcset="img/main/gallery/panorama-320.webp, img/main/gallery/panorama-320@2x.webp 2x">
                   <source srcset="img/main/gallery/panorama-1200.jpg, img/main/gallery/panorama-1200@2x.jpg 2x"
                           media="(min-width: 1200px)">
                   <source srcset="img/main/gallery/panorama-660.jpg, img/main/gallery/panorama-660@2x.jpg 2x"
@@ -93,11 +94,11 @@
             <li class="gallery-list__item">
               <div class="gallery-list__lead">
                 <picture>
-                  <source srcset="img/main/gallery/photo-1-desktop.webp, img/main/gallery/photo-1-desktop@2x.webp 2x"
+                  <source type="image/webp" srcset="img/main/gallery/photo-1-desktop.webp, img/main/gallery/photo-1-desktop@2x.webp 2x"
                           media="(min-width: 1200px)">
-                  <source srcset="img/main/gallery/photo-1-tablet.webp, img/main/gallery/photo-1-tablet@2x.webp 2x"
+                  <source type="image/webp" srcset="img/main/gallery/photo-1-tablet.webp, img/main/gallery/photo-1-tablet@2x.webp 2x"
                           media="(min-width: 660px)">
-                          <source srcset="img/main/gallery/photo-1-mobile.webp, img/main/gallery/photo-1-mobile@2x.webp 2x">
+                  <source type="image/webp" srcset="img/main/gallery/photo-1-mobile.webp, img/main/gallery/photo-1-mobile@2x.webp 2x">
                   <source srcset="img/main/gallery/photo-1-desktop.jpg, img/main/gallery/photo-1-desktop@2x.jpg 2x"
                           media="(min-width: 1200px)">
                   <source srcset="img/main/gallery/photo-1-tablet.jpg, img/main/gallery/photo-1-tablet@2x.jpg 2x"
@@ -122,11 +123,11 @@
             <li class="gallery-list__item">
               <div class="gallery-list__lead">
                 <picture>
-                  <source srcset="img/main/gallery/photo-2-desktop.webp, img/main/gallery/photo-2-desktop@2x.webp 2x"
+                  <source type="image/webp" srcset="img/main/gallery/photo-2-desktop.webp, img/main/gallery/photo-2-desktop@2x.webp 2x"
                           media="(min-width: 1200px)">
-                  <source srcset="img/main/gallery/photo-2-tablet.webp, img/main/gallery/photo-2-tablet@2x.webp 2x"
+                  <source type="image/webp" srcset="img/main/gallery/photo-2-tablet.webp, img/main/gallery/photo-2-tablet@2x.webp 2x"
                           media="(min-width: 660px)">
-                          <source srcset="img/main/gallery/photo-2-mobile.webp, img/main/gallery/photo-2-mobile@2x.webp 2x">
+                  <source type="image/webp" srcset="img/main/gallery/photo-2-mobile.webp, img/main/gallery/photo-2-mobile@2x.webp 2x">
                   <source srcset="img/main/gallery/photo-2-desktop.jpg, img/main/gallery/photo-2-desktop@2x.jpg 2x"
                           media="(min-width: 1200px)">
                   <source srcset="img/main/gallery/photo-2-tablet.jpg, img/main/gallery/photo-2-tablet@2x.jpg 2x"
@@ -151,11 +152,11 @@
             <li class="gallery-list__item">
               <div class="gallery-list__lead">
                 <picture>
-                  <source srcset="img/main/gallery/photo-3-desktop.webp, img/main/gallery/photo-3-desktop@2x.webp 2x"
+                  <source type="image/webp" srcset="img/main/gallery/photo-3-desktop.webp, img/main/gallery/photo-3-desktop@2x.webp 2x"
                           media="(min-width: 1200px)">
-                  <source srcset="img/main/gallery/photo-3-tablet.webp, img/main/gallery/photo-3-tablet@2x.webp 2x"
+                  <source type="image/webp" srcset="img/main/gallery/photo-3-tablet.webp, img/main/gallery/photo-3-tablet@2x.webp 2x"
                           media="(min-width: 660px)">
-                          <source srcset="img/main/gallery/photo-3-mobile.webp, img/main/gallery/photo-3-mobile@2x.webp 2x">
+                  <source type="image/webp" srcset="img/main/gallery/photo-3-mobile.webp, img/main/gallery/photo-3-mobile@2x.webp 2x">
                   <source srcset="img/main/gallery/photo-3-desktop.jpg, img/main/gallery/photo-3-desktop@2x.jpg 2x"
                           media="(min-width: 1200px)">
                   <source srcset="img/main/gallery/photo-3-tablet.jpg, img/main/gallery/photo-3-tablet@2x.jpg 2x"
@@ -180,11 +181,11 @@
             <li class="gallery-list__item">
               <div class="gallery-list__lead">
                 <picture>
-                  <source srcset="img/main/gallery/photo-4-desktop.webp, img/main/gallery/photo-4-desktop@2x.webp 2x"
+                  <source type="image/webp" srcset="img/main/gallery/photo-4-desktop.webp, img/main/gallery/photo-4-desktop@2x.webp 2x"
                           media="(min-width: 1200px)">
-                  <source srcset="img/main/gallery/photo-4-tablet.webp, img/main/gallery/photo-4-tablet@2x.webp 2x"
+                  <source type="image/webp" srcset="img/main/gallery/photo-4-tablet.webp, img/main/gallery/photo-4-tablet@2x.webp 2x"
                           media="(min-width: 660px)">
-                          <source srcset="img/main/gallery/photo-4-mobile.webp, img/main/gallery/photo-4-mobile@2x.webp 2x">
+                  <source type="image/webp" srcset="img/main/gallery/photo-4-mobile.webp, img/main/gallery/photo-4-mobile@2x.webp 2x">
                   <source srcset="img/main/gallery/photo-4-desktop.jpg, img/main/gallery/photo-4-desktop@2x.jpg 2x"
                           media="(min-width: 1200px)">
                   <source srcset="img/main/gallery/photo-4-tablet.jpg, img/main/gallery/photo-4-tablet@2x.jpg 2x"
@@ -209,11 +210,11 @@
             <li class="gallery-list__item">
               <div class="gallery-list__lead">
                 <picture>
-                  <source srcset="img/main/gallery/photo-5-desktop.webp, img/main/gallery/photo-5-desktop@2x.webp 2x"
+                  <source type="image/webp" srcset="img/main/gallery/photo-5-desktop.webp, img/main/gallery/photo-5-desktop@2x.webp 2x"
                           media="(min-width: 1200px)">
-                  <source srcset="img/main/gallery/photo-5-tablet.webp, img/main/gallery/photo-5-tablet@2x.webp 2x"
+                  <source type="image/webp" srcset="img/main/gallery/photo-5-tablet.webp, img/main/gallery/photo-5-tablet@2x.webp 2x"
                           media="(min-width: 660px)">
-                          <source srcset="img/main/gallery/photo-5-mobile.webp, img/main/gallery/photo-5-mobile@2x.webp 2x">
+                  <source type="image/webp" srcset="img/main/gallery/photo-5-mobile.webp, img/main/gallery/photo-5-mobile@2x.webp 2x">
                   <source srcset="img/main/gallery/photo-5-desktop.jpg, img/main/gallery/photo-5-desktop@2x.jpg 2x"
                           media="(min-width: 1200px)">
                   <source srcset="img/main/gallery/photo-5-tablet.jpg, img/main/gallery/photo-5-tablet@2x.jpg 2x"
@@ -238,11 +239,11 @@
             <li class="gallery-list__item">
               <div class="gallery-list__lead">
                 <picture>
-                  <source srcset="img/main/gallery/photo-6-desktop.webp, img/main/gallery/photo-6-desktop@2x.webp 2x"
+                  <source type="image/webp" srcset="img/main/gallery/photo-6-desktop.webp, img/main/gallery/photo-6-desktop@2x.webp 2x"
                           media="(min-width: 1200px)">
-                  <source srcset="img/main/gallery/photo-6-tablet.webp, img/main/gallery/photo-6-tablet@2x.webp 2x"
+                  <source type="image/webp" srcset="img/main/gallery/photo-6-tablet.webp, img/main/gallery/photo-6-tablet@2x.webp 2x"
                           media="(min-width: 660px)">
-                          <source srcset="img/main/gallery/photo-6-mobile.webp, img/main/gallery/photo-6-mobile@2x.webp 2x">
+                  <source type="image/webp" srcset="img/main/gallery/photo-6-mobile.webp, img/main/gallery/photo-6-mobile@2x.webp 2x">
                   <source srcset="img/main/gallery/photo-6-desktop.jpg, img/main/gallery/photo-6-desktop@2x.jpg 2x"
                           media="(min-width: 1200px)">
                   <source srcset="img/main/gallery/photo-6-tablet.jpg, img/main/gallery/photo-6-tablet@2x.jpg 2x"
@@ -270,16 +271,16 @@
       <section class="editor">
         <div class="container editor__lead">
           <h2 class="visually__hidden">Редактор PINK - лучший из лучших</h2>
-          <p class="editor__lead-title">Затмите их всех!</br> Выкладывайте все, что накопилось в телефоне!</p>
+          <p class="editor__lead-title">Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!</p>
         </div>
         <div class="editor__content">
           <div class="editor__content-inner container">
             <form class="editor__form" action="https://echo.htmlacademy.ru" method="POST">
               <div class="editor__column">
                 <picture>
-                  <source srcset="img/main/gallery/photo-post-tablet.webp, img/main/gallery/photo-post-tablet@2x.webp 2x"
+                  <source type="image/webp" srcset="img/main/gallery/photo-post-tablet.webp, img/main/gallery/photo-post-tablet@2x.webp 2x"
                           media="(min-width: 660px)">
-                  <source srcset="img/main/gallery/photo-post-mobile.webp, img/main/gallery/photo-post-mobile@2x.webp 2x">
+                  <source type="image/webp" srcset="img/main/gallery/photo-post-mobile.webp, img/main/gallery/photo-post-mobile@2x.webp 2x">
                   <source srcset="img/main/gallery/photo-post-tablet.jpg, img/main/gallery/photo-post-tablet@2x.jpg 2x"
                           media="(min-width: 660px)">
                   <img class="editor__image" src="img/main/gallery/photo-post-mobile.jpg" srcset="img/main/gallery/photo-post-mobile@2x.jpg 2x" alt="Получившееся изображение" />
